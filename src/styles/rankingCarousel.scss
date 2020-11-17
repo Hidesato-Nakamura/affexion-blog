@@ -1,0 +1,29 @@
+.carousel {
+  box-sizing: border-box;
+  background-color: gray;
+  scroll-snap-type: mandatory;
+  scroll-snap-points-x: repeat(100%);
+  scroll-snap-type: x mandatory;
+  display: flex;
+  overflow-x: scroll;
+}
+.carousel section {
+  box-sizing: border-box;
+  scroll-snap-align: start;
+  border-right: 1px solid gray;
+  padding: 1rem;
+  min-width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  position: relative;
+}
+.carousel section h1 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  width: 100%;
+  left: 0;
+}
