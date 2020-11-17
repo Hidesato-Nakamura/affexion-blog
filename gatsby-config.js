@@ -18,12 +18,10 @@ module.exports = {
     },
   },
   plugins: [
-    `gatsby-plugin-smoothscroll`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        // replace "UA-XXXXXXXXX-X" with your own Tracking ID
-        trackingId: "G-G5QF40NCZ2",
+        trackingId: "UA-183245095-1",
         head: true,
       },
     },
@@ -32,10 +30,11 @@ module.exports = {
       options: {
         email: process.env.CLIENT_EMAIL,
         key: process.env.PRIVATE_KEY.replace(/\\n/g, "\n"),
-        viewId: `253132331`,
+        viewId: `233124214`,
         startDate: `2020-06-01`,
       },
     },
+    `gatsby-plugin-smoothscroll`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
