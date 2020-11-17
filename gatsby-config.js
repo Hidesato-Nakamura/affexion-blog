@@ -23,7 +23,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         // replace "UA-XXXXXXXXX-X" with your own Tracking ID
-        trackingId: "UA-168668807-1",
+        trackingId: "G-G5QF40NCZ2",
         head: true,
       },
     },
@@ -32,7 +32,7 @@ module.exports = {
       options: {
         email: process.env.CLIENT_EMAIL,
         key: process.env.PRIVATE_KEY.replace(/\\n/g, "\n"),
-        viewId: `220318115`,
+        viewId: `253132331`,
         startDate: `2020-06-01`,
       },
     },
