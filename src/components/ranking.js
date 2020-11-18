@@ -33,7 +33,6 @@ const rankingQl = graphql`
 `
 
 const Ranking = ({ data }) => {
-  console.log(data)
   const views = data.allPageViews.edges
   const posts = data.allMarkdownRemark.edges
   const max = 10
