@@ -525,6 +525,7 @@ footer {
       background: #777;
     }
     &::after {
+      // position: absolute;
       margin: auto 0 auto 0;
       display: block;
       content: "";
@@ -532,6 +533,7 @@ footer {
       height: 4px;
       border-right: 1px solid #777;
       border-top: 1px solid #777;
+      margin-left: -2px;
       transform: rotate(45deg);
     }
   }
