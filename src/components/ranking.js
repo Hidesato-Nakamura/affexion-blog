@@ -3,14 +3,14 @@ import { graphql, StaticQuery } from "gatsby"
 import { SubCard } from "../components/card"
 import scrollTo from "gatsby-plugin-smoothscroll"
 
-// allPageViews(sort: { order: DESC, fields: totalCount }) {
-//   edges {
-//     node {
-//       totalCount
-//       path
-//     }
-//   }
-// }
+allPageViews(sort: { order: DESC, fields: totalCount }) {
+  edges {
+    node {
+      totalCount
+      path
+    }
+  }
+}
 
 const rankingQl = graphql`
   query rankingQl {
@@ -35,20 +35,20 @@ const rankingQl = graphql`
 
 const Ranking = ({ data }) => {
   console.log(data)
-  // const views = data.allPageViews.edges
+  const views = data.allPageViews.edges
   const posts = data.allMarkdownRemark.edges
   const max = 10
   let scrollIndex = 0
   let preOperation = `next`
   let postResults = []
-  // views.forEach(edge => {
-  //   posts.forEach(post => {
-  //     //全ページから投稿された記事を抽出
-  //     if (post.node.fields.slug === edge.node.path) {
-  //       postResults.push(post.node)
-  //     }
-  //   })
-  // })
+  views.forEach(edge => {
+    posts.forEach(post => {
+      //全ページから投稿された記事を抽出
+      if (post.node.fields.slug === edge.node.path) {
+        postResults.push(post.node)
+      }
+    })
+  })
   console.log(postResults)
   function Arrow(type) {
     switch (type) {

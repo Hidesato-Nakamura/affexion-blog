@@ -21,7 +21,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-183245095-1",
+        trackingId: "UA-168668807-1",
         head: true,
       },
     },
@@ -30,8 +30,8 @@ module.exports = {
       options: {
         email: process.env.CLIENT_EMAIL,
         key: process.env.PRIVATE_KEY.replace(/\\n/g, "\n"),
-        viewId: `233124214`,
-        startDate: `2020-11-18`,
+        viewId: `220318115`,
+        startDate: `2020-11-17`,
       },
     },
     `gatsby-plugin-smoothscroll`,
