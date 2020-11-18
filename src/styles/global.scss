@@ -190,7 +190,8 @@ footer {
     padding-bottom: 30px;
   }
   @include mq(sp) {
-    width: 100%;
+    width: 90%;
+    margin: auto;
     // max-width: $sub-card-block-width;
     // min-width: $sub-card-block-width;
     padding-bottom: 30px;
@@ -205,7 +206,7 @@ footer {
     }
     @include mq(sp) {
       // height: 100px;
-      padding-bottom: 75%;
+      padding-bottom: 70%;
     }
 
     img {
@@ -399,6 +400,12 @@ footer {
       display: none;
     }
     .cards {
+      @include mq(sp) {
+        width: v(400);
+      }
+      @include mq() {
+        width: 360px;
+      }
       scroll-snap-align: start;
       margin-right: 40px;
     }
@@ -493,11 +500,11 @@ footer {
 
 .pgn {
   justify-content: center;
-  border-radius: v(8);
+  border-radius: 30px;
   margin: 20px auto;
   width: 180px;
   padding: 8px 20px 8px;
-  border: v(0.1) solid #777;
+  border: 1px solid #777;
   color: #777;
   .read-more {
     font-size: 12px;
@@ -561,9 +568,10 @@ footer {
     .home-links1 {
       color: black;
       position: absolute;
+      padding: 0;
       @include mq(sp) {
-        left: 0;
-        top: -390px;
+        left: v(40);
+        bottom: v(810);
       }
       @include mq() {
         left: 0;
@@ -571,13 +579,21 @@ footer {
       }
 
       img {
-        padding: 0;
-        width: 18px;
-        height: 18px;
+        @include mq(sp) {
+          margin: 0;
+          width: 18px;
+          height: 18px;
+        }
+        @include mq() {
+          margin: 0;
+          width: 18px;
+          height: 18px;
+        }
       }
       .affexion {
         font-size: 14px;
         font-weight: normal;
+        padding: 0;
         margin: 0 0 0 12px;
         letter-spacing: 3px;
       }
@@ -587,8 +603,14 @@ footer {
       color: black;
       position: absolute;
       padding: 0 0 0 0;
-      right: 0;
-      top: -290px;
+      @include mq(sp) {
+        right: v(40);
+        bottom: v(810);
+      }
+      @include mq() {
+        right: 0;
+        top: -290px;
+      }
       .offical-site {
         font-size: 12px;
         margin-right: 5px;
@@ -602,36 +624,79 @@ footer {
   }
 
   .header-title {
-    position: absolute;
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 3px;
-    padding: 7px;
-    background-color: #deff00;
-    left: 0;
-    bottom: 30px;
+    @include mq(sp) {
+      position: absolute;
+      font-size: v(30);
+      font-weight: bold;
+      letter-spacing: 3px;
+      padding: v(4);
+      background-color: #deff00;
+      left: v(20);
+      bottom: v(370);
+    }
+    @include mq() {
+      position: absolute;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      padding: 7px;
+      background-color: #deff00;
+      left: 0;
+      bottom: 30px;
+    }
   }
 
   .header-subtitle {
-    position: absolute;
-    font-size: 12px;
-    font-weight: normal;
-    letter-spacing: 2px;
-    padding: 7px;
-    background-color: #ffffff;
-    left: 0;
-    bottom: -60px;
+    @include mq(sp) {
+      position: absolute;
+      font-size: v(30);
+      font-weight: normal;
+      letter-spacing: 2px;
+      padding: v(4);
+      background-color: #ffffff;
+      left: v(20);
+      bottom: v(170);
+    }
+    @include mq() {
+      position: absolute;
+      font-size: 12px;
+      font-weight: normal;
+      letter-spacing: 2px;
+      padding: 7px;
+      background-color: #ffffff;
+      left: 0;
+      bottom: -60px;
+    }
   }
 
   .header-blog {
-    transform: translateY(-50%);
-    position: absolute;
-    font-size: 120px;
-    font-weight: bold;
-    letter-spacing: v(3);
-    // background-color: red;
-    left: 50%;
-    top: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    @include mq(sp) {
+      width: 100%;
+      text-align: center;
+      transform: translateY(-50%);
+      position: absolute;
+      font-size: v(250);
+      font-weight: bold;
+      letter-spacing: v(3);
+      padding: 0;
+      margin: 0;
+
+      // background-color: red;
+      top: 100%;
+    }
+    @include mq() {
+      transform: translateY(-50%);
+      position: absolute;
+      font-size: 120px;
+      font-weight: bold;
+      letter-spacing: v(3);
+      // background-color: red;
+      left: 50%;
+      top: 100%;
+    }
   }
 
   .home-admin {
