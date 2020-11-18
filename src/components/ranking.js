@@ -3,17 +3,16 @@ import { graphql, StaticQuery } from "gatsby"
 import { SubCard } from "../components/card"
 import scrollTo from "gatsby-plugin-smoothscroll"
 
-allPageViews(sort: { order: DESC, fields: totalCount }) {
-  edges {
-    node {
-      totalCount
-      path
-    }
-  }
-}
-
 const rankingQl = graphql`
   query rankingQl {
+    allPageViews(sort: { order: DESC, fields: totalCount }) {
+      edges {
+        node {
+          totalCount
+          path
+        }
+      }
+    }
     allMarkdownRemark {
       edges {
         node {
