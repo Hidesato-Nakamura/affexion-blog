@@ -38,7 +38,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             {post.frontmatter.date}
           </p>
         </header>
-        <p>閲覧数：{data.pageViews ? data.pageViews.totalCount : 0}</p>
+        {/* <p>閲覧数：{data.pageViews ? data.pageViews.totalCount : 0}</p> */}
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{
@@ -121,8 +121,9 @@ export const pageQuery = graphql`
         tags
       }
     }
-    pageViews(id: { eq: $slug }) {
-      totalCount
-    }
   }
 `
+
+// pageViews(id: { eq: $slug }) {
+//   totalCount
+// }

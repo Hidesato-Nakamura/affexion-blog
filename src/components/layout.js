@@ -5,7 +5,7 @@ import Header from "../components/header"
 import CategoryBar from "../components/categoryBar"
 import ContactUs from "../components/contactUs"
 import Footer from "../components/footer"
-import Ranking from "../components/ranking"
+// import Ranking from "../components/ranking"
 // import BackgroundImage from "../../static/images/gumma_05.png"
 // import CategoryCard from "../components/categoryCard"
 // import PopularCard from "../components/popularCard"
@@ -24,7 +24,7 @@ const Layout = ({ location, title, children }) => {
         <main>
           <div className="children">{children}</div>
         </main>
-        <Ranking />
+        {/* <Ranking /> */}
         <CategoryBar />
         <ContactUs />
       </div>
