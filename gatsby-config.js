@@ -31,7 +31,7 @@ module.exports = {
         email: process.env.CLIENT_EMAIL,
         key: process.env.PRIVATE_KEY.replace(/\\n/g, "\n"),
         viewId: `220318115`,
-        startDate: `2020-11-17`,
+        startDate: `2020-06-01`,
       },
     },
     `gatsby-plugin-smoothscroll`,
