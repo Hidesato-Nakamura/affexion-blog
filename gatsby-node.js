@@ -2,6 +2,8 @@ const _ = require("lodash")
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 exports.createPages = async ({ graphql, actions }) => {
+  console.log = function () {}
+
   const { createPage } = actions
 
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
