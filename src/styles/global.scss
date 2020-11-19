@@ -733,6 +733,12 @@ footer {
       }
       .affexion {
         font-family: "aktiv-grotesk";
+        @include mq(sp) {
+          font-size: v(25);
+        }
+        @include mq() {
+          font-size: 14px;
+        }
         font-size: 14px;
         font-weight: normal;
         margin: 0 0 0 12px;
