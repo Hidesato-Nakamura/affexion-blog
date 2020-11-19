@@ -30,13 +30,8 @@ export const MainCard = ({ node }) => {
 export const SubCard = ({ node, rank }) => {
   const frontmatter = node.frontmatter
   const slug = node.fields.slug
-  var w = window,
-    d = document,
-    e = d.documentElement,
-    g = d.getElementsByTagName("body")[0],
-    wi = w.innerWidth || e.clientWidth || g.clientWidth,
-    he = w.innerHeight || e.clientHeight || g.clientHeight
-  console.log("wi=" + wi)
+  var w = typeof window !== `undefined` ? window : null
+  var wi = typeof window !== `undefined` ? w.innerWidth : null
   let card = (
     <Link to={slug} style={{ textDecoration: "none" }}>
       <section className="sub-card">
@@ -55,7 +50,7 @@ export const SubCard = ({ node, rank }) => {
               <div>{frontmatter.title}</div>
             )}
           </div>
-          {rank > 0 && wi < 750 ? null : (
+          {rank > 0 && typeof window !== `undefined` && wi < 750 ? null : (
             <div className="tag flex">
               {frontmatter.tags.map((tag, index) => {
                 return <div key={index}>#{tag}</div>
