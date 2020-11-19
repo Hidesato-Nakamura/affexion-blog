@@ -7,7 +7,6 @@ import { MainCard } from "../components/card"
 import { rhythm } from "../utils/typography"
 
 const BlogList = (data, pageContext, location) => {
-  console.log(data)
   const posts = data.data.allMarkdownRemark.edges
   const siteTitle = "bloglist"
   return (

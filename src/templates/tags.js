@@ -50,7 +50,6 @@ const TestTemplate = ({ data, pageContext, location }) => {
       </Link>
     </li>
   ))
-  console.log(data)
   return (
     <Layout location={location} title={`Tags | ${title}`}>
       <SEO title={tag} />

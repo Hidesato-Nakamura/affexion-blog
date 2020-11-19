@@ -2,8 +2,6 @@ const _ = require("lodash")
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 exports.createPages = async ({ graphql, actions }) => {
-  console.log = function () {}
-
   const { createPage } = actions
 
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
@@ -62,9 +60,7 @@ exports.createPages = async ({ graphql, actions }) => {
   tags = _.uniq(tags)
   // let tagPath = path.resolve(`/tags/${tag}`)
   tags.forEach(tag => {
-    console.log(tag)
     const tagPath = path.resolve(`/tags/${tag}`)
-    console.log(tagPath)
     createPage({
       path: tagPath,
       component: path.resolve(`./src/templates/tags.js`),
@@ -77,7 +73,6 @@ exports.createPages = async ({ graphql, actions }) => {
   //ページネーション後のページ生成。
   const postsPerPage = 2
   const numPages = Math.ceil(posts.length / postsPerPage)
-  console.log(`numPages=${numPages}`)
   Array.from({ length: numPages }).forEach((_, i) => {
     createPage({
       path: i === 0 ? `/blog/` : `/blog/${i + 1}`,
