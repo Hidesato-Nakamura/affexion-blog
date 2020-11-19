@@ -25,6 +25,8 @@ const rankingQl = graphql`
             description
             featuredimage
             tags
+            color
+            contributor
           }
         }
       }

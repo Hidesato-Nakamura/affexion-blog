@@ -99,6 +99,7 @@ export const pageQuery = graphql`
             title
             description
             contributor
+            color
             featuredimage
             tags
           }
