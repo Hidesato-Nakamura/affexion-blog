@@ -396,10 +396,10 @@ footer {
     height: 100%;
     // animation: infinity-loop 10s infinite linear 1s both;
     .link {
-      // display: -webkit-box;
-      // -webkit-line-clamp: 1;
-      // -webkit-box-orient: vertical;
-
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      white-space: nowrap;
       @include mq(sp) {
         margin: auto v(20);
       }
@@ -410,7 +410,7 @@ footer {
       .category-tag {
         color: #fff;
         // width: 50px;
-        max-width: 100px;
+        // max-width: 100px;
         @include mq(sp) {
           font-size: v(20);
         }
