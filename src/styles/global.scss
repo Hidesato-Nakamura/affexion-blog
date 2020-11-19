@@ -142,13 +142,15 @@ footer {
       -webkit-box-orient: vertical;
       @include mq() {
         font-size: 12px;
+        -webkit-line-clamp: 2;
+        height: 3em;
+        line-height: 1.5em;
       }
       @include mq(sp) {
         font-size: v(30);
+        -webkit-line-clamp: 1;
       }
 
-      height: 3em;
-      line-height: 1.5em;
       overflow: hidden;
       font-weight: bold;
       margin-bottom: 0;
@@ -189,15 +191,16 @@ footer {
     display: table;
     margin-top: 5px;
     padding: auto;
-
+    @include mq(sp) {
+    }
     .avatar {
       @include mq() {
         width: 20px;
         height: 20px;
       }
       @include mq(sp) {
-        width: v(50);
-        height: v(50);
+        width: v(40);
+        height: v(40);
       }
 
       background-color: #219ddd;
@@ -214,7 +217,7 @@ footer {
         font-size: 12px;
       }
       @include mq(sp) {
-        font-size: v(30);
+        font-size: v(20);
       }
     }
   }
