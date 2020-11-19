@@ -1,4 +1,4 @@
-@import url("https://use.typekit.net/fqm7twt.css");
+@import url("https://use.typekit.net/qft0gts.css");
 
 @function v($size, $viewport: 750) {
   $rate: 100 / $viewport;
@@ -122,9 +122,6 @@ footer {
 
 .sub-card {
   margin-bottom: 25px;
-  // background: #ffffff;
-  // border-radius: v(1);
-  // box-shadow: v(1) v(1) v(5) #ccc;
   .card-content {
     padding: 15px 0 0;
     .date {
@@ -251,7 +248,13 @@ footer {
     }
 
     img {
-      border-radius: 20px;
+      @include mq() {
+        border-radius: 20px;
+      }
+      @include mq(sp) {
+        border-radius: v(50);
+      }
+
       position: absolute;
       top: 50%;
       left: 50%;
@@ -393,9 +396,10 @@ footer {
     /* Chrome, Safari 対応 */
     display: none;
   }
+  text-align: center;
   .category-content {
     display: flex;
-    // width: 1920px;
+    justify-content: center;
     height: 100%;
     // animation: infinity-loop 10s infinite linear 1s both;
     .link {
@@ -410,10 +414,9 @@ footer {
         margin: auto 15px;
       }
       text-decoration: none;
+
       .category-tag {
         color: #fff;
-        // width: 50px;
-        // max-width: 100px;
         @include mq(sp) {
           font-size: v(20);
         }
@@ -458,6 +461,7 @@ footer {
   // overflow: scroll;
   .ranking-title {
     font-family: "aktiv-grotesk";
+    color: black;
     @include mq() {
       font-size: 120px;
       letter-spacing: 3px;
@@ -637,8 +641,10 @@ footer {
   border: 1px solid #777;
   color: #777;
   .read-more {
+    font-family: "aktiv-grotesk";
     font-size: 12px;
-    font-weight: bold;
+    letter-spacing: 1px;
+    // font-weight: bold;
     justify-content: center;
     text-align: center;
   }
@@ -656,14 +662,14 @@ footer {
     }
     &::after {
       // position: absolute;
-      margin: auto 0 auto 0;
+      margin: auto 0 auto -3px;
       display: block;
       content: "";
       width: 4px;
       height: 4px;
       border-right: 1px solid #777;
       border-top: 1px solid #777;
-      margin-left: -2px;
+
       transform: rotate(45deg);
     }
   }
@@ -716,8 +722,8 @@ footer {
       img {
         @include mq(sp) {
           margin: 0;
-          width: 18px;
-          height: 18px;
+          width: v(30);
+          height: v(30);
         }
         @include mq() {
           margin: 0;
@@ -726,9 +732,9 @@ footer {
         }
       }
       .affexion {
+        font-family: "aktiv-grotesk";
         font-size: 14px;
         font-weight: normal;
-        padding: 0;
         margin: 0 0 0 12px;
         letter-spacing: 3px;
       }
@@ -829,6 +835,7 @@ footer {
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
+    color: black;
     @include mq(sp) {
       width: 100%;
       text-align: center;
