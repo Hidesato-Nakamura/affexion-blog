@@ -788,8 +788,6 @@ footer {
       line-height: v(40);
       font-weight: normal;
       letter-spacing: 2px;
-      padding: v(4);
-      // background-color: #ffffff;
       left: v(17);
       bottom: v(210);
     }
@@ -798,15 +796,31 @@ footer {
       font-size: 12px;
       font-weight: normal;
       letter-spacing: 2px;
-      padding: 7px;
-      background-color: #ffffff;
       left: 0;
       bottom: -60px;
+    }
+    span.head {
+      @include mq(sp) {
+        background-color: #deff00;
+        padding: v(8);
+        letter-spacing: v(5);
+        font-weight: bold;
+      }
+      @include mq() {
+        background-color: #deff00;
+        padding: 4px 4px;
+        letter-spacing: 4px;
+        font-weight: bold;
+      }
     }
     span {
       @include mq(sp) {
         background-color: #ffffff;
         padding: v(8);
+      }
+      @include mq() {
+        background-color: #ffffff;
+        padding: 4px 4px;
       }
     }
   }

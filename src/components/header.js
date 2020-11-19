@@ -28,8 +28,11 @@ const Header = () => {
         {/* <Link to="/admin">
           <div className="home-admin">記事投稿</div>
         </Link> */}
-        <div className="header-title">アフェクションってどんな会社？</div>
+        {/* <div className="header-title">アフェクションってどんな会社？</div> */}
         <div className="header-subtitle">
+          <span className="head">
+            アフェクションってどんな会社？ <br />
+          </span>
           <span>
             web, 3DCG, XR, アプリケーション開発を
             <br />
