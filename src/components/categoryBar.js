@@ -36,13 +36,12 @@ const CategoryBarContents = ({ data }) => {
     }
   })
   tags = _.uniq(tags)
-  // console.log(tags)
+
   let tagsList = []
 
   tags.forEach(tag => {
     let count = 0
     posts.forEach(edge => {
-      // console.log(`${tag}:${edge.node.frontmatter.tags}`)
       edge.node.frontmatter.tags.forEach(_tag => {
         if (_tag === tag) {
           ++count
@@ -54,7 +53,6 @@ const CategoryBarContents = ({ data }) => {
       totalCount: count,
     })
   })
-  // console.log(tagsList)
 
   const bar = (
     <div className="category-bar flex">
@@ -78,8 +76,6 @@ const CategoryBarContents = ({ data }) => {
 }
 
 export default function CategoryBar() {
-  // let tags = ["aaa", "bbb", "ccc", "ddd", "ライオン", "富士山"]
-  // console.log(`data=${data}`)
   const categoryCard = (
     <StaticQuery
       query={categoryQl}

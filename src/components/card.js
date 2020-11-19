@@ -4,8 +4,6 @@ import { Link } from "gatsby"
 export const MainCard = ({ node }) => {
   const frontmatter = node.frontmatter
   const slug = node.fields.slug
-  // const article = node.html
-  console.log(node)
   let card = (
     <Link to={slug} style={{ textDecoration: "none" }}>
       <section className="main-card flex">

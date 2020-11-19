@@ -48,7 +48,6 @@ const Ranking = ({ data }) => {
       }
     })
   })
-  console.log(postResults)
   function Arrow(type) {
     switch (type) {
       case `next`:
@@ -62,7 +61,6 @@ const Ranking = ({ data }) => {
       default:
         break
     }
-    console.log(scrollIndex)
   }
 
   const pc = (
