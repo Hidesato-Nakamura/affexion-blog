@@ -57,7 +57,7 @@ export const SubCard = ({ node, rank }) => {
         </div>
         <div className="profile flex">
           <div className="avatar" />
-          <div className="name">Kazuma Kanai</div>
+          <div className="name">{frontmatter.contributor}</div>
         </div>
       </section>
     </Link>

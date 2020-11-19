@@ -28,6 +28,7 @@ type Data = {
           date: string
           description: string
           featuredimage: String
+          contributor: String
         }
         fields: {
           slug: string
@@ -97,6 +98,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD. YYYY")
             title
             description
+            contributor
             featuredimage
             tags
           }

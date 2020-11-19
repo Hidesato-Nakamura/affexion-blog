@@ -69,7 +69,7 @@ const Ranking = ({ data }) => {
       <div className="ranking-card flex">
         {postResults.map((postResult, index) => {
           return index < max ? (
-            <article id={`ScrollCard${index}`} key={index} className="cards">
+            <article key={index} className="cards">
               <SubCard node={postResults[index]} rank={index + 1} />
             </article>
           ) : null

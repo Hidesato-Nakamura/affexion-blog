@@ -55,20 +55,22 @@ const CategoryBarContents = ({ data }) => {
   })
 
   const bar = (
-    <div className="category-bar flex">
-      {tagsList.map(
-        list => (
-          // list && list.length ? (
-          <Link to={`/tags/${list.tag}/`} className="link" key={list.tag}>
-            <div className="category-tag">
-              <span style={{ color: `#deff00` }}>#</span>
-              <span>{list.tag}</span>
-              {/* ({`${list.totalCount}`}) */}
-            </div>
-          </Link>
-        )
-        // ) : null
-      )}
+    <div className="category-bar">
+      <div className="category-content">
+        {tagsList.map(
+          list => (
+            // list && list.length ? (
+            <Link to={`/tags/${list.tag}/`} className="link" key={list.tag}>
+              <div className="category-tag">
+                <span style={{ color: `#deff00` }}>#</span>
+                <span>{list.tag}</span>
+                {/* ({`${list.totalCount}`}) */}
+              </div>
+            </Link>
+          )
+          // ) : null
+        )}
+      </div>
     </div>
   )
 
