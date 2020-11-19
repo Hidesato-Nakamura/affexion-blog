@@ -21,7 +21,13 @@ collections:
         }
       - { label: "タイトル", name: "title", widget: "string" }
       - { label: "概要", name: "description", widget: "string" }
-      - { label: "投稿者", name: "contributor", widget: "string" }
+      - {
+          label: "投稿者",
+          name: "contributor",
+          widget: "select",
+          options: ["Kazuma Kanai", "Hidesato Nakamura"],
+        }
+      - { label: "アイコン色", name: "color", widget: "color" }
       - { label: "本文", name: "body", widget: "markdown" }
       - { label: "カテゴリー", name: "tags", widget: "list" }
       - { label: "投稿時刻", name: "date", widget: "datetime" }

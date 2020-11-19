@@ -30,14 +30,18 @@ const Header = () => {
         </Link> */}
         <div className="header-title">アフェクションってどんな会社？</div>
         <div className="header-subtitle">
-          web, 3DCG, XR, アプリケーション開発を
-          <br />
-          行うデザインラボです。
-          <br />
-          デザインとエンジニアリングを組み合わせ
-          <br />
-          新たな表現を目標とします。
-          <br />
+          <span>
+            web, 3DCG, XR, アプリケーション開発を
+            <br />
+          </span>
+          <span>
+            行うデザインラボです。
+            <br />
+          </span>
+          <span>
+            デザインとエンジニアリングを組み合わせ <br />
+          </span>
+          <span>新たな表現を目標とします。</span>
         </div>
         <div className="header-blog">BLOG</div>
       </div>
