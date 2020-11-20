@@ -8,7 +8,7 @@ const Header = () => {
   //   if (path === rootPath) {
   header = (
     <div id="header-box">
-      <div className="home-header"></div>
+      {/* <div className="home-header"></div> */}
       {/* <img src="/images/header.png"></img> */}
       <div className="content-width">
         <Link to="/">
@@ -29,7 +29,7 @@ const Header = () => {
           <div className="home-admin">記事投稿</div>
         </Link> */}
         {/* <div className="header-title">アフェクションってどんな会社？</div> */}
-        <div className="header-subtitle">
+        <div className="header-discription">
           <span className="head">
             アフェクションってどんな会社？ <br />
           </span>

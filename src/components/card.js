@@ -40,25 +40,26 @@ export const SubCard = ({ node, rank }) => {
         </div>
 
         <div className="card-content">
-          <div className="date">{frontmatter.date}</div>
-          <div className="title flex">
-            {rank > 0 ? (
-              <div>
-                {rank}位 : {frontmatter.title}
-              </div>
-            ) : (
-              <div>{frontmatter.title}</div>
-            )}
-          </div>
-          {rank > 0 && typeof window !== `undefined` && wi < 750 ? null : (
+          {rank === 0 ? <div className="date">{frontmatter.date}</div> : null}
+
+          {rank > 0 ? (
+            <div className="title-line-1 flex">
+              {rank}位 : {frontmatter.title}
+            </div>
+          ) : (
+            <div className="title-line-2 flex">{frontmatter.title}</div>
+          )}
+
+          {rank > 0 ? (
+            <div className="discription">{frontmatter.description}</div>
+          ) : null}
+          {rank > 0 && typeof window !== `undefined` ? null : (
             <div className="tag flex">
               {frontmatter.tags.map((tag, index) => {
                 return <div key={index}>#{tag}</div>
               })}
             </div>
           )}
-
-          {/* <div className="text">{frontmatter.description}</div> */}
         </div>
         <div className="profile flex">
           <div
