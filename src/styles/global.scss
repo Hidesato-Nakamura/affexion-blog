@@ -105,6 +105,9 @@ footer {
 .flex-wrap {
   flex-wrap: wrap;
   justify-content: space-between;
+  @include mq() {
+    margin-top: 200px;
+  }
   @include mq(sp) {
     margin-top: v(140);
   }
@@ -770,30 +773,13 @@ footer {
     }
   }
 
-  .header-title {
-    @include mq(sp) {
-      position: absolute;
-      font-size: v(29);
-      font-weight: bold;
-      letter-spacing: v(8);
-      padding: v(4);
-      background-color: #deff00;
-      left: v(20);
-      bottom: v(370);
-    }
+  .header-subtitle {
     @include mq() {
       position: absolute;
-      font-size: 12px;
-      font-weight: bold;
-      letter-spacing: 3px;
-      padding: 7px;
-      background-color: #deff00;
+      letter-spacing: 2px;
       left: 0;
-      bottom: 30px;
+      bottom: -60px;
     }
-  }
-
-  .header-subtitle {
     @include mq(sp) {
       position: absolute;
       font-size: v(25);
@@ -803,36 +789,29 @@ footer {
       left: v(17);
       bottom: v(210);
     }
-    @include mq() {
-      position: absolute;
-      font-size: 12px;
-      font-weight: normal;
-      letter-spacing: 2px;
-      left: 0;
-      bottom: -60px;
-    }
     span.head {
+      @include mq() {
+        background-color: #deff00;
+        letter-spacing: 4px;
+        font-weight: bold;
+        font-size: 22px;
+      }
       @include mq(sp) {
         background-color: #deff00;
         padding: v(8);
         letter-spacing: v(5);
         font-weight: bold;
       }
-      @include mq() {
-        background-color: #deff00;
-        padding: 4px 4px;
-        letter-spacing: 4px;
-        font-weight: bold;
-      }
     }
     span {
+      @include mq() {
+        background-color: #ffffff;
+        padding: 7px;
+        font-size: 20px;
+      }
       @include mq(sp) {
         background-color: #ffffff;
         padding: v(8);
-      }
-      @include mq() {
-        background-color: #ffffff;
-        padding: 4px 4px;
       }
     }
   }
@@ -843,6 +822,15 @@ footer {
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     color: black;
+    @include mq() {
+      transform: translateY(-50%);
+      position: absolute;
+      font-size: 175px;
+      font-weight: bold;
+      letter-spacing: v(3);
+      left: 50%;
+      top: 100%;
+    }
     @include mq(sp) {
       width: 100%;
       text-align: center;
@@ -855,16 +843,6 @@ footer {
       margin: 0;
 
       // background-color: red;
-      top: 100%;
-    }
-    @include mq() {
-      transform: translateY(-50%);
-      position: absolute;
-      font-size: 120px;
-      font-weight: bold;
-      letter-spacing: v(3);
-      // background-color: red;
-      left: 50%;
       top: 100%;
     }
   }
