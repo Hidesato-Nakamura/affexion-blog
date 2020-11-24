@@ -603,6 +603,9 @@ footer {
 
   .ranking-card {
     // background-color: red;
+    // position: relative;
+
+    display: flex;
     @include mq() {
       scroll-snap-type: mandatory;
       scroll-snap-points-x: repeat(100%);
@@ -625,7 +628,6 @@ footer {
       scrollbar-width: none;
     }
 
-    display: flex;
     &::-webkit-scrollbar {
       /* Chrome, Safari 対応 */
       display: none;
@@ -651,7 +653,7 @@ footer {
   $arrow-length-sp: v(30);
   $box-size-sp: v(80);
   $box-top: 57%;
-
+  position: relative;
   .ranking-left-arrow {
     @include mq() {
       width: 80px;

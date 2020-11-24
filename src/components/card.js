@@ -32,15 +32,18 @@ export const SubCard = ({ node, rank }) => {
   const slug = node.fields.slug
   var w = typeof window !== `undefined` ? window : null
   var wi = typeof window !== `undefined` ? w.innerWidth : null
+  console.log(wi)
+  console.log(rank)
   let card = (
     <Link to={slug} style={{ textDecoration: "none" }}>
       <section className="sub-card">
-        {rank === 0 && wi < 750 ? (
+        {rank === 0 || wi >= 750 ? (
           <div className="card-img-block">
             <img src={frontmatter.featuredimage} alt="" />
           </div>
         ) : (
           <div className="card-img-block2">
+            {console.log(rank === 0 && wi < 750)}
             <img src={frontmatter.featuredimage} alt="" />
           </div>
         )}
