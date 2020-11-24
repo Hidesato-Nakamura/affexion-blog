@@ -68,7 +68,7 @@ main {
     }
   }
   @include mq(sp) {
-    width: 90%;
+    width: 100%;
     margin: auto;
 
     div.children {
@@ -146,13 +146,16 @@ footer {
     max-width: 90%;
     min-width: 90%;
     margin: auto;
-
-    padding-bottom: 30px;
+    margin-bottom: v(121);
+    // padding-bottom: 30px;
   }
 }
 
 .sub-card {
   margin-bottom: 0px;
+  @include mq(sp) {
+    position: relative;
+  }
   .card-content {
     padding-top: 18px;
     .date {
@@ -161,7 +164,8 @@ footer {
         letter-spacing: 0;
       }
       @include mq(sp) {
-        font-size: v(20);
+        font-size: v(25);
+        margin-top: v(18);
       }
       color: #111111;
     }
@@ -187,24 +191,25 @@ footer {
     }
     .title-line-2 {
       display: -webkit-box;
-      -webkit-line-clamp: 2;
+
       -webkit-box-orient: vertical;
+      overflow: hidden;
+      font-weight: bold;
+      text-align: left;
+      color: #333;
       @include mq() {
+        -webkit-line-clamp: 2;
         font-size: 16px;
         -webkit-line-clamp: 2;
         height: 3.8em;
         line-height: 1.9em;
       }
       @include mq(sp) {
-        font-size: v(30);
         -webkit-line-clamp: 1;
+        font-size: v(25);
+        -webkit-line-clamp: 1;
+        margin-top: v(11);
       }
-
-      overflow: hidden;
-      font-weight: bold;
-      margin-bottom: 0;
-      text-align: left;
-      color: #333;
     }
     .discription {
       display: -webkit-box;
@@ -233,7 +238,8 @@ footer {
         font-size: 12px;
       }
       @include mq(sp) {
-        font-size: v(20);
+        font-size: v(21);
+        margin-top: v(14);
       }
 
       // font-size: 10px;
@@ -242,15 +248,23 @@ footer {
       overflow: hidden;
       text-decoration: underline;
       div {
-        margin-right: 10px;
+        @include mq() {
+          margin-right: 10px;
+        }
+        @include mq(sp) {
+          margin-right: v(20);
+        }
       }
     }
   }
   .profile {
     display: table;
-    margin-top: 12px;
-    padding: auto;
+    @include mq() {
+      margin-top: 12px;
+      padding: auto;
+    }
     @include mq(sp) {
+      margin-top: v(12);
     }
     .avatar {
       @include mq() {
@@ -258,8 +272,40 @@ footer {
         height: 29px;
       }
       @include mq(sp) {
-        width: v(40);
-        height: v(40);
+        width: v(38);
+        height: v(38);
+      }
+
+      background-color: #219ddd;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    .name {
+      color: #a8a8a8;
+      display: table-cell;
+      font-weight: bold;
+      vertical-align: middle;
+      // font-size: 12px;
+      @include mq() {
+        font-size: 14px;
+      }
+      @include mq(sp) {
+        font-size: v(20);
+      }
+    }
+  }
+  //携帯かつランキングではない時だけ表示
+  .profile2 {
+    display: table;
+    @include mq(sp) {
+      position: absolute;
+      right: 0px;
+      bottom: 0px;
+    }
+    .avatar {
+      @include mq(sp) {
+        width: v(35);
+        height: v(35);
       }
 
       background-color: #219ddd;
@@ -287,7 +333,7 @@ footer {
     }
     @include mq(sp) {
       // height: 100px;
-      padding-bottom: 70%;
+      padding-bottom: 59%;
     }
 
     img {
@@ -305,6 +351,29 @@ footer {
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+  }
+
+  //750px以下かつ携帯
+  .card-img-block2 {
+    position: relative;
+    @include mq(sp) {
+      // height: 100px;
+      padding-bottom: 74%;
+      margin-bottom: v(10);
+    }
+
+    img {
+      @include mq(sp) {
+        border-radius: v(50);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
   }
 }
@@ -429,9 +498,9 @@ footer {
   }
 
   @include mq(sp) {
-    margin-top: v(100);
+    margin-top: v(93);
     max-width: 1920px;
-    height: v(120);
+    height: v(90);
   }
   background-color: #000;
   overflow: auto;
@@ -464,7 +533,7 @@ footer {
           font-size: 16px;
         }
         @include mq(sp) {
-          font-size: v(20);
+          font-size: v(23);
         }
       }
     }
@@ -491,51 +560,71 @@ footer {
 }
 
 .ranking-box {
-  position: relative;
   @include mq() {
     width: 1160px;
   }
   @include mq(sp) {
     width: 100%;
-    // margin: 0 calc(50% - 50vw);
+    position: relative;
   }
 
   margin: auto;
   // overflow: scroll;
-  .ranking-title {
-    font-family: "aktiv-grotesk";
-    color: black;
-    @include mq() {
-      font-size: 175px;
-      letter-spacing: 12px;
-      margin-left: -12px;
-      margin-bottom: -15px;
-    }
+  .ranking-title-container {
     @include mq(sp) {
-      font-size: v(150);
-      text-align: center;
-      letter-spacing: v(4);
+      // width: 100%;
+      text-align: justify;
+      text-align-last: justify;
+      -moz-text-align-last: justify;
+      overflow: hidden;
     }
+    .ranking-title {
+      font-family: "aktiv-grotesk";
+      color: black;
 
-    font-weight: bold;
+      @include mq() {
+        font-size: 175px;
+        letter-spacing: 12px;
+        margin-left: -12px;
+        margin-bottom: -15px;
+      }
+      @include mq(sp) {
+        width: 120%;
+        margin-left: -2vw;
+        font-size: v(150);
+        text-align: center;
+        letter-spacing: v(17);
+        margin-bottom: v(45);
+      }
+
+      font-weight: bold;
+    }
   }
 
   .ranking-card {
     // background-color: red;
     @include mq() {
-      // width: 100%;
+      scroll-snap-type: mandatory;
+      scroll-snap-points-x: repeat(100%);
+      scroll-snap-type: x mandatory;
+      overflow: auto;
+      -ms-overflow-style: none; /* IE, Edge 対応 */
+      scrollbar-width: none;
     }
     @include mq(sp) {
       width: 100%;
+      margin: auto;
+      // background-color: red;
       // margin: auto;
       // margin: 0 calc(50% - 50vw);
+      // scroll-snap-type: mandatory;
+      // scroll-snap-points-x: repeat(100%);
+      // scroll-snap-type: x mandatory;
+      overflow: auto;
+      -ms-overflow-style: none; /* IE, Edge 対応 */
+      scrollbar-width: none;
     }
-    scroll-snap-type: mandatory;
-    scroll-snap-points-x: repeat(100%);
-    scroll-snap-type: x mandatory;
-    overflow: auto;
-    -ms-overflow-style: none; /* IE, Edge 対応 */
-    scrollbar-width: none;
+
     display: flex;
     &::-webkit-scrollbar {
       /* Chrome, Safari 対応 */
@@ -548,16 +637,21 @@ footer {
         margin-right: 55px;
       }
       @include mq(sp) {
-        width: v(400);
-        min-width: v(400);
-        margin-right: v(20);
-        margin-left: v(20);
+        $ranking-card-width: v(490);
+        width: $ranking-card-width;
+        min-width: $ranking-card-width;
+        max-width: $ranking-card-width;
+        margin-right: v(5);
+        margin-left: v(40);
       }
-      width: 360px;
       scroll-snap-align: start;
     }
   }
   $arrow-length: 30px;
+  $arrow-length-sp: v(30);
+  $box-size-sp: v(80);
+  $box-top: 57%;
+
   .ranking-left-arrow {
     @include mq() {
       width: 80px;
@@ -571,9 +665,9 @@ footer {
       align-items: center;
     }
     @include mq(sp) {
-      width: v(100);
-      height: v(100);
-      top: 45%;
+      width: $box-size-sp;
+      height: $box-size-sp;
+      top: $box-top;
       opacity: 0.5;
       left: v(20);
       position: absolute;
@@ -584,13 +678,16 @@ footer {
 
     .left-arrow {
       @include mq() {
+        width: $arrow-length;
+        height: $arrow-length;
       }
       @include mq(sp) {
+        width: $arrow-length-sp;
+        height: $arrow-length-sp;
       }
       position: absolute;
       right: 12.5px;
-      width: $arrow-length;
-      height: $arrow-length;
+
       border-left: 2px solid #fff;
       border-bottom: 2px solid #fff;
       transform: rotate(45deg);
@@ -609,9 +706,9 @@ footer {
       align-items: center;
     }
     @include mq(sp) {
-      width: v(100);
-      height: v(100);
-      top: 45%;
+      width: $box-size-sp;
+      height: $box-size-sp;
+      top: $box-top;
       right: v(20);
       position: absolute;
       background-color: #000;
@@ -621,10 +718,16 @@ footer {
     }
 
     .right-arrow {
+      @include mq() {
+        width: $arrow-length;
+        height: $arrow-length;
+      }
+      @include mq(sp) {
+        width: $arrow-length-sp;
+        height: $arrow-length-sp;
+      }
       position: absolute;
       left: 12.5px;
-      width: $arrow-length;
-      height: $arrow-length;
       border-top: 2px solid #fff;
       border-right: 2px solid #fff;
       transform: rotate(45deg);
@@ -679,33 +782,61 @@ footer {
 
 .pgn {
   justify-content: center;
-  border-radius: 30px;
-  margin: -13px auto 25px;
-  width: 250px;
-  padding: 8px 20px 8px;
-  border: 1px solid #777;
   color: #777;
   display: flex;
+  @include mq() {
+    border-radius: 30px;
+    margin: -13px auto 25px;
+    width: 250px;
+    padding: 8px 20px 8px;
+    border: 1px solid #777;
+  }
+  @include mq(sp) {
+    // height: v(30);
+    border-radius: v(1000);
+    margin: v(145) auto v(45);
+    width: 65%;
+    padding: v(15) v(24) v(15);
+    border: 1px solid #777;
+  }
   .read-more {
-    margin-left: -10px;
     font-family: "aktiv-grotesk";
-    font-size: 18px;
-    letter-spacing: 1.5px;
-    // font-weight: bold;
     justify-content: center;
     text-align: center;
+    @include mq() {
+      font-size: 18px;
+      letter-spacing: 1.5px;
+      margin-left: -10px;
+    }
+    @include mq(sp) {
+      font-size: v(35);
+      letter-spacing: v(2);
+      margin-left: -10px;
+    }
   }
   .arrow {
     position: relative;
     display: flex;
-    margin-left: v(3);
+
+    @include mq() {
+      margin-left: v(3);
+    }
+    @include mq(sp) {
+      margin-left: v(20);
+    }
     &::before {
       margin: auto 0 auto;
       display: block;
       content: "";
-      width: 25px;
-      height: 1px;
       background: #777;
+      @include mq() {
+        width: 25px;
+        height: 1px;
+      }
+      @include mq(sp) {
+        width: v(55);
+        height: 1px;
+      }
     }
     &::after {
       // position: absolute;
@@ -739,6 +870,7 @@ footer {
     padding-bottom: 124%;
     background: url("/images/header-sp.png") no-repeat;
     background-size: cover;
+    position: relative;
   }
 
   .content-width {
@@ -756,13 +888,14 @@ footer {
       color: black;
       position: absolute;
       display: flex;
+      align-items: center;
       @include mq() {
         left: 0;
         top: 35px;
       }
       @include mq(sp) {
-        left: v(10);
-        top: v(10);
+        left: v(45);
+        top: v(45);
       }
 
       img {
@@ -773,23 +906,25 @@ footer {
         }
         @include mq(sp) {
           margin: 0;
-          width: v(25);
-          height: v(25);
+          width: v(40);
+          height: v(40);
         }
       }
       .affexion {
         font-family: "aktiv-grotesk";
         font-weight: normal;
-        line-height: 18px;
+
         @include mq() {
+          line-height: 18px;
           font-size: 16px;
           margin-left: 20px;
           letter-spacing: 5px;
         }
         @include mq(sp) {
-          font-size: v(25);
-          line-height: v(25);
-          margin-left: v(10);
+          font-size: v(30);
+          letter-spacing: v(8);
+          line-height: v(30);
+          margin-left: v(35);
         }
       }
     }
@@ -802,22 +937,36 @@ footer {
       @include mq() {
         right: 0;
         top: 30px;
-        font-size: 16px;
       }
       @include mq(sp) {
-        right: v(10);
-        top: v(10);
-        font-size: v(10);
+        font-size: v(20);
+        right: v(45);
+        top: v(45);
       }
       .offical-site {
-        margin-right: 5px;
-        letter-spacing: 1px;
+        @include mq() {
+          margin-right: 5px;
+          letter-spacing: 1px;
+          font-size: 16px;
+        }
+        @include mq(sp) {
+          margin-right: v(5);
+          letter-spacing: v(2);
+          font-size: v(20);
+        }
       }
       img {
-        padding: 0;
-        width: 18px;
-        height: 18px;
-        margin: auto 5px auto 18px;
+        @include mq() {
+          padding: 0;
+          // width: 18px;
+          height: 18px;
+          margin: auto 5px auto 18px;
+        }
+        @include mq(sp) {
+          padding: 0;
+          height: v(25);
+          margin: auto 5px auto 18px;
+        }
       }
     }
   }
@@ -833,11 +982,11 @@ footer {
     @include mq(sp) {
       position: absolute;
       font-size: v(25);
-      line-height: v(40);
+      line-height: v(49);
       font-weight: normal;
-      letter-spacing: 2px;
-      left: v(17);
-      bottom: v(210);
+      letter-spacing: v(1);
+      left: v(40);
+      top: v(505);
     }
     span.head {
       @include mq() {
@@ -850,9 +999,10 @@ footer {
       }
       @include mq(sp) {
         background-color: #deff00;
-        padding: v(8);
-        letter-spacing: v(5);
+        padding: v(12) v(12);
+        letter-spacing: v(7);
         font-weight: bold;
+        font-size: v(27);
       }
     }
     span {
@@ -863,18 +1013,21 @@ footer {
       }
       @include mq(sp) {
         background-color: #ffffff;
-        padding: v(8);
+        padding: v(13) v(11);
       }
     }
   }
   .header-blog-container {
     @include mq(sp) {
+      width: 100%;
+      // padding-bottom: 181%;
+      padding-bottom: 0%;
+      // background-color: red;
       text-align: justify;
       text-align-last: justify;
       -moz-text-align-last: justify;
-      // justify-content: center;
-      // text-align-last: justify;
-      // overflow: hidden;
+      position: absolute;
+      overflow: hidden;
     }
     .header-blog {
       font-family: "aktiv-grotesk";
@@ -882,6 +1035,7 @@ footer {
       -webkit-line-clamp: 1;
       -webkit-box-orient: vertical;
       color: black;
+
       @include mq() {
         transform: translateY(-50%);
         position: absolute;
@@ -892,12 +1046,14 @@ footer {
         top: 355px;
       }
       @include mq(sp) {
-        width: 100%;
         transform: translateY(-50%);
         position: absolute;
-        font-size: v(260);
-        font-weight: bold;
-        top: v(925);
+        font-size: 34.67vw;
+        font-weight: 700;
+        bottom: 0;
+        left: -3vw;
+        letter-spacing: 3.7vw;
+        text-align: center;
       }
     }
   }
@@ -922,10 +1078,10 @@ footer {
       letter-spacing: 12px;
     }
     @include mq(sp) {
-      margin-top: v(90);
-      font-size: v(60);
+      margin-top: v(105);
+      font-size: v(70);
       font-weight: bold;
-      letter-spacing: v(10);
+      letter-spacing: v(12);
     }
   }
 
@@ -936,8 +1092,9 @@ footer {
       letter-spacing: 2px;
     }
     @include mq(sp) {
-      margin-bottom: v(40);
-      font-size: v(18);
+      margin-bottom: v(50);
+      margin-top: v(10);
+      font-size: v(20);
       letter-spacing: v(8);
     }
   }
@@ -948,15 +1105,22 @@ footer {
       letter-spacing: 2px;
     }
     @include mq(sp) {
-      font-size: v(18);
+      font-size: v(35);
       padding-bottom: v(40);
-      letter-spacing: v(3);
+      letter-spacing: v(6);
     }
 
     div.top {
-      width: 40px;
+      // width: 40px;
       margin: auto;
-      margin-bottom: 25px;
+      text-align: center;
+      @include mq() {
+        margin-bottom: 25px;
+      }
+      @include mq(sp) {
+        margin-bottom: 0px;
+      }
+
       // background-color: red;
       cursor: pointer;
     }
@@ -964,10 +1128,20 @@ footer {
       cursor: pointer;
       margin: auto;
       content: "";
-      width: 21px;
-      height: 21px;
-      border-right: 1px solid #777;
-      border-top: 1px solid #777;
+      @include mq() {
+        width: 21px;
+        height: 21px;
+        border-right: 1px solid #777;
+        border-top: 1px solid #777;
+      }
+      @include mq(sp) {
+        width: v(50);
+        height: v(50);
+        border-right: v(2) solid #777;
+        border-top: v(2) solid #777;
+        margin-bottom: -3.3vw;
+      }
+
       transform: rotate(-45deg);
       margin-bottom: -12px;
     }
@@ -980,39 +1154,52 @@ footer {
   // margin-top: 25px;
   .links {
     background-color: #282a2c;
-    height: 120px;
-    padding: 60px 0px;
+
+    @include mq() {
+      height: 120px;
+    }
+    @include mq(sp) {
+    }
     display: flex;
     justify-content: center;
     .official-site {
       @include mq() {
+        padding: 53px 0px;
         font-size: 16px;
         line-height: 16px;
         letter-spacing: 1px;
       }
       @include mq(sp) {
-        font-size: v(10);
+        font-size: v(22);
+        padding: v(47) 0px;
+        margin-right: v(30);
       }
     }
 
     img {
       filter: invert(1);
       @include mq() {
-        width: 18px;
+        // width: 18px;
         height: 18px;
+        padding: 0;
+        margin: auto 0px auto 15px;
       }
       @include mq(sp) {
-        width: v(15);
-        height: v(15);
+        // width: v(15);
+        height: v(30);
+        padding: 0;
+        margin: auto 0px auto v(35);
       }
-
-      padding: 0;
-      margin: auto 0px auto 15px;
     }
   }
   .infomations {
     background-color: #000;
-    height: 200px;
+    @include mq() {
+      height: 200px;
+    }
+    @include mq(sp) {
+      height: v(350);
+    }
     padding: auto;
     .adresses {
       @include mq() {
@@ -1022,9 +1209,9 @@ footer {
         letter-spacing: 1px;
       }
       @include mq(sp) {
-        font-size: v(14);
-        padding-top: 30px;
-        line-height: v(28);
+        font-size: v(25);
+        padding-top: v(70);
+        line-height: v(51);
       }
     }
 
@@ -1035,9 +1222,12 @@ footer {
         // padding-bottom: 30px;
       }
       @include mq(sp) {
-        font-size: v(6);
-        padding-top: 30px;
-        padding-bottom: 30px;
+        font-size: v(23);
+        font-weight: normal;
+        padding-top: v(45);
+        letter-spacing: v(1);
+        // margin-bottom: v(1000);
+        // padding-bottom: v(50);
       }
     }
   }

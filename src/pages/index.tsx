@@ -41,7 +41,9 @@ type Data = {
 const BlogIndex = ({ data, location }: PageProps<Data>) => {
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
-
+  var w = typeof window !== `undefined` ? window : null
+  var wi = typeof window !== `undefined` ? w.innerWidth : null
+  var num = wi !== null && wi >= 750 ? 6 : 7
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="Home" />
@@ -58,7 +60,7 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
       })} */}
       <div className="flex flex-wrap">
         {posts.map(({ node }, index) => {
-          return index < 6 ? (
+          return index < num ? (
             <article key={node.fields.slug} className="sub-card-block">
               <SubCard node={node} rank={0} />
             </article>

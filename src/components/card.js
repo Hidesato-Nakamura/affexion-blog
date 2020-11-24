@@ -35,9 +35,15 @@ export const SubCard = ({ node, rank }) => {
   let card = (
     <Link to={slug} style={{ textDecoration: "none" }}>
       <section className="sub-card">
-        <div className="card-img-block">
-          <img src={frontmatter.featuredimage} alt="" />
-        </div>
+        {rank === 0 && wi < 750 ? (
+          <div className="card-img-block">
+            <img src={frontmatter.featuredimage} alt="" />
+          </div>
+        ) : (
+          <div className="card-img-block2">
+            <img src={frontmatter.featuredimage} alt="" />
+          </div>
+        )}
 
         <div className="card-content">
           {rank === 0 ? <div className="date">{frontmatter.date}</div> : null}
@@ -50,7 +56,7 @@ export const SubCard = ({ node, rank }) => {
             <div className="title-line-2 flex">{frontmatter.title}</div>
           )}
 
-          {rank > 0 ? (
+          {rank > 0 && wi >= 750 ? (
             <div className="discription">{frontmatter.description}</div>
           ) : null}
           {rank > 0 && typeof window !== `undefined` ? null : (
@@ -61,13 +67,23 @@ export const SubCard = ({ node, rank }) => {
             </div>
           )}
         </div>
-        <div className="profile flex">
-          <div
-            className="avatar"
-            style={{ backgroundColor: frontmatter.color }}
-          />
-          <div className="name">{frontmatter.contributor}</div>
-        </div>
+        {rank === 0 && wi < 750 ? (
+          <div className="profile2 flex">
+            <div
+              className="avatar"
+              style={{ backgroundColor: frontmatter.color }}
+            />
+            <div className="name">{frontmatter.contributor}</div>
+          </div>
+        ) : (
+          <div className="profile flex">
+            <div
+              className="avatar"
+              style={{ backgroundColor: frontmatter.color }}
+            />
+            <div className="name">{frontmatter.contributor}</div>
+          </div>
+        )}
       </section>
     </Link>
   )

@@ -67,7 +67,10 @@ const Ranking = ({ data }) => {
 
   const pc = (
     <div className="ranking-box">
-      <div className="ranking-title">RANKING</div>
+      <div className="ranking-title-container">
+        <div className="ranking-title">RANKING</div>
+      </div>
+
       <div className="ranking-card flex">
         {postResults.map((postResult, index) => {
           return index < max ? (
