@@ -68,11 +68,11 @@ main {
     }
   }
   @include mq(sp) {
-    width: 100%;
+    width: 90%;
     margin: auto;
 
     div.children {
-      margin: 100px 0 0 0;
+      margin-top: 100px;
     }
   }
 }
@@ -88,10 +88,11 @@ header {
 .turu {
   @include mq() {
     background: url("/images/gumma_05.png") no-repeat;
+    background-size: cover;
   }
-
-  background-size: cover;
-  // background-color: blue;
+  @include mq() {
+    // background-color: blue;
+  }
 }
 
 footer {
@@ -105,13 +106,11 @@ footer {
   }
 }
 
-.flex {
-  display: flex;
-}
 .flex-wrap {
-  flex-wrap: wrap;
-  justify-content: space-between;
   @include mq() {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     margin-top: 165px;
   }
   @include mq(sp) {
@@ -120,7 +119,13 @@ footer {
   &:after {
     content: "";
     display: block;
-    width: $sub-card-block-width;
+
+    @include mq() {
+      width: $sub-card-block-width;
+    }
+    @include mq(sp) {
+      width: 10%;
+    }
     height: 0;
   }
 }
@@ -138,9 +143,10 @@ footer {
   }
   @include mq(sp) {
     width: 90%;
+    max-width: 90%;
+    min-width: 90%;
     margin: auto;
-    // max-width: $sub-card-block-width;
-    // min-width: $sub-card-block-width;
+
     padding-bottom: 30px;
   }
 }
@@ -221,6 +227,7 @@ footer {
       }
     }
     .tag {
+      display: flex;
       // letter-spacing: v(1);
       @include mq() {
         font-size: 12px;
@@ -519,7 +526,7 @@ footer {
       // width: 100%;
     }
     @include mq(sp) {
-      // width: 100%;
+      width: 100%;
       // margin: auto;
       // margin: 0 calc(50% - 50vw);
     }
@@ -529,6 +536,7 @@ footer {
     overflow: auto;
     -ms-overflow-style: none; /* IE, Edge 対応 */
     scrollbar-width: none;
+    display: flex;
     &::-webkit-scrollbar {
       /* Chrome, Safari 対応 */
       display: none;
@@ -677,6 +685,7 @@ footer {
   padding: 8px 20px 8px;
   border: 1px solid #777;
   color: #777;
+  display: flex;
   .read-more {
     margin-left: -10px;
     font-family: "aktiv-grotesk";
@@ -727,7 +736,7 @@ footer {
 
   @include mq(sp) {
     width: 100%;
-    padding-bottom: 120%;
+    padding-bottom: 124%;
     background: url("/images/header-sp.png") no-repeat;
     background-size: cover;
   }
@@ -746,13 +755,14 @@ footer {
     .home-links1 {
       color: black;
       position: absolute;
+      display: flex;
       @include mq() {
         left: 0;
         top: 35px;
       }
       @include mq(sp) {
-        left: v(40);
-        top: v(40);
+        left: v(10);
+        top: v(10);
       }
 
       img {
@@ -763,8 +773,8 @@ footer {
         }
         @include mq(sp) {
           margin: 0;
-          width: v(30);
-          height: v(30);
+          width: v(25);
+          height: v(25);
         }
       }
       .affexion {
@@ -778,6 +788,8 @@ footer {
         }
         @include mq(sp) {
           font-size: v(25);
+          line-height: v(25);
+          margin-left: v(10);
         }
       }
     }
@@ -786,14 +798,15 @@ footer {
       color: black;
       position: absolute;
       padding: 0 0 0 0;
+      display: flex;
       @include mq() {
         right: 0;
         top: 30px;
         font-size: 16px;
       }
       @include mq(sp) {
-        right: v(40);
-        top: v(40);
+        right: v(10);
+        top: v(10);
         font-size: v(10);
       }
       .offical-site {
@@ -854,33 +867,38 @@ footer {
       }
     }
   }
-
-  .header-blog {
-    font-family: "aktiv-grotesk";
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-    color: black;
-    @include mq() {
-      transform: translateY(-50%);
-      position: absolute;
-      font-size: 175px;
-      font-weight: bold;
-      letter-spacing: 12px;
-      left: 530px;
-      top: 355px;
-    }
+  .header-blog-container {
     @include mq(sp) {
-      width: 100%;
-      text-align: center;
-      transform: translateY(-50%);
-      position: absolute;
-      font-size: v(250);
-      font-weight: bold;
-      letter-spacing: v(3);
-      padding: 0;
-      margin: 0;
-      top: 100%;
+      text-align: justify;
+      text-align-last: justify;
+      -moz-text-align-last: justify;
+      // justify-content: center;
+      // text-align-last: justify;
+      // overflow: hidden;
+    }
+    .header-blog {
+      font-family: "aktiv-grotesk";
+      // display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      color: black;
+      @include mq() {
+        transform: translateY(-50%);
+        position: absolute;
+        font-size: 175px;
+        font-weight: bold;
+        letter-spacing: 12px;
+        left: 530px;
+        top: 355px;
+      }
+      @include mq(sp) {
+        width: 100%;
+        transform: translateY(-50%);
+        position: absolute;
+        font-size: v(260);
+        font-weight: bold;
+        top: v(925);
+      }
     }
   }
 

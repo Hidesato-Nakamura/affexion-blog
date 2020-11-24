@@ -29,6 +29,7 @@ const Layout = ({ location, title, children }) => {
         <ContactUs />
       </div>
       <Footer />
+      <div style={{ textAlign: `justify` }}>aaaaa</div>
     </div>
   )
 }

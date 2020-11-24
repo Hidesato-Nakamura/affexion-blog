@@ -46,7 +46,9 @@ const Header = () => {
           </span>
           <span>新たな表現を目標とします。</span>
         </div>
-        <div className="header-blog">BLOG</div>
+        <div className="header-blog-container">
+          <div className="header-blog">BLOG</div>
+        </div>
       </div>
     </div>
   )
