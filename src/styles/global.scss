@@ -511,21 +511,27 @@ footer {
   text-align: center;
   .category-content {
     display: flex;
-    justify-content: center;
+
     height: 100%;
+    @include mq() {
+      justify-content: center;
+    }
+    @include mq(sp) {
+      justify-content: left;
+    }
     // animation: infinity-loop 10s infinite linear 1s both;
     .link {
       display: -webkit-box;
       -webkit-line-clamp: 1;
       -webkit-box-orient: vertical;
       white-space: nowrap;
-      @include mq(sp) {
-        margin: auto v(20);
-      }
+      text-decoration: none;
       @include mq() {
         margin: auto 15px;
       }
-      text-decoration: none;
+      @include mq(sp) {
+        margin: auto v(20);
+      }
 
       .category-tag {
         color: #fff;
