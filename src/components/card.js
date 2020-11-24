@@ -43,7 +43,6 @@ export const SubCard = ({ node, rank }) => {
           </div>
         ) : (
           <div className="card-img-block2">
-            {console.log(rank === 0 && wi < 750)}
             <img src={frontmatter.featuredimage} alt="" />
           </div>
         )}
