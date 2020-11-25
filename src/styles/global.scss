@@ -89,8 +89,11 @@ header {
   @include mq() {
     background: url("/images/gumma_05.png") no-repeat;
     background-size: cover;
+    min-width: 1200px;
   }
-  @include mq() {
+  @include mq(sp) {
+    background: url("/images/gumma_05.png") no-repeat;
+    background-size: cover;
     // background-color: blue;
   }
 }
@@ -576,41 +579,21 @@ footer {
 
   margin: auto;
   // overflow: scroll;
-  .ranking-title-container {
-    @include mq(sp) {
-      // width: 100%;
-      text-align: justify;
-      text-align-last: justify;
-      -moz-text-align-last: justify;
-      overflow: hidden;
+  .ranking-title {
+    @include mq() {
+      width: auto;
+      margin-top: 100px;
+      margin-bottom: 20px;
     }
-    .ranking-title {
-      font-family: "aktiv-grotesk";
-      color: black;
-
-      @include mq() {
-        font-size: 175px;
-        letter-spacing: 12px;
-        margin-left: -12px;
-        margin-bottom: -15px;
-      }
-      @include mq(sp) {
-        width: 120%;
-        margin-left: -2vw;
-        font-size: v(150);
-        text-align: center;
-        letter-spacing: v(17);
-        margin-bottom: v(45);
-      }
-
-      font-weight: bold;
+    @include mq(sp) {
+      width: 100%;
+      height: auto;
+      margin-top: v(120);
+      margin-bottom: v(60);
     }
   }
 
   .ranking-card {
-    // background-color: red;
-    // position: relative;
-
     display: flex;
     @include mq() {
       scroll-snap-type: mandatory;
@@ -656,15 +639,16 @@ footer {
     }
   }
   $arrow-length: 30px;
+  $box-top: 280px;
   $arrow-length-sp: v(30);
   $box-size-sp: v(80);
-  $box-top: 57%;
+  $box-top-sp: 52%;
   position: relative;
   .ranking-left-arrow {
     @include mq() {
       width: 80px;
       height: 80px;
-      top: 360px;
+      top: $box-top;
       opacity: 0.5;
       left: -20px;
       position: absolute;
@@ -675,7 +659,7 @@ footer {
     @include mq(sp) {
       width: $box-size-sp;
       height: $box-size-sp;
-      top: $box-top;
+      top: $box-top-sp;
       opacity: 0.5;
       left: v(20);
       position: absolute;
@@ -705,7 +689,7 @@ footer {
     @include mq() {
       width: 80px;
       height: 80px;
-      top: 360px;
+      top: $box-top;
       right: -20px;
       position: absolute;
       background-color: #000;
@@ -716,7 +700,7 @@ footer {
     @include mq(sp) {
       width: $box-size-sp;
       height: $box-size-sp;
-      top: $box-top;
+      top: $box-top-sp;
       right: v(20);
       position: absolute;
       background-color: #000;
@@ -867,6 +851,7 @@ footer {
 
 #header-box {
   @include mq() {
+    min-width: 1200px;
     height: 360px;
     background: url("/images/header.png") no-repeat;
     background-size: cover;
@@ -952,6 +937,8 @@ footer {
         top: v(45);
       }
       .offical-site {
+        overflow: hidden;
+        white-space: nowrap;
         @include mq() {
           margin-right: 5px;
           letter-spacing: 1px;
@@ -1025,43 +1012,51 @@ footer {
       }
     }
   }
-  .header-blog-container {
-    @include mq(sp) {
-      width: 100%;
-      padding-bottom: 181%;
-      // padding-bottom: 0%;
-      // background-color: red;
-      text-align: justify;
-      text-align-last: justify;
-      -moz-text-align-last: justify;
+  .header-blog {
+    @include mq() {
+      transform: translateY(50%);
       position: absolute;
-      overflow: hidden;
+      bottom: -18px;
+      left: 50%;
     }
-    .header-blog {
-      font-family: "aktiv-grotesk";
-      // display: -webkit-box;
-      -webkit-line-clamp: 1;
-      -webkit-box-orient: vertical;
-      color: black;
-
+    @include mq(sp) {
+      max-width: 100%;
+      min-width: 100%;
+      position: absolute;
+      top: v(820);
+    }
+    img {
       @include mq() {
-        transform: translateY(-50%);
-        position: absolute;
-        font-size: 175px;
-        font-weight: bold;
-        letter-spacing: 12px;
-        left: 530px;
-        top: 355px;
+        width: auto;
+        height: auto;
       }
       @include mq(sp) {
-        transform: translateY(-50%);
-        position: absolute;
-        font-size: 34.67vw;
-        font-weight: 700;
-        bottom: 0;
-        left: -3vw;
-        letter-spacing: 3.7vw;
-        text-align: center;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .scroll-image {
+    @include mq() {
+      width: 12px;
+      transform: translateY(50%);
+      position: absolute;
+      right: 0px;
+      bottom: -20px;
+    }
+    @include mq(sp) {
+      position: absolute;
+      right: v(20);
+      top: v(500);
+    }
+    img {
+      @include mq() {
+        width: auto;
+        height: auto;
+      }
+      @include mq(sp) {
+        width: v(20);
       }
     }
   }
@@ -1157,6 +1152,12 @@ footer {
 }
 
 .footer-box {
+  @include mq() {
+    min-width: 1200px;
+  }
+  @include mq(sp) {
+    // min-width: 1200px;
+  }
   text-align: center;
   color: #fff;
   // margin-top: 25px;

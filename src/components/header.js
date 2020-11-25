@@ -46,8 +46,11 @@ const Header = () => {
           </span>
           <span>新たな表現を目標とします。</span>
         </div>
-        <div className="header-blog-container">
-          <div className="header-blog">BLOG</div>
+        <div className="header-blog">
+          <img src="/images/letters/blog-title_11.png" alt="blog-title"></img>
+        </div>
+        <div className="scroll-image">
+          <img src="/images/scroll-image_11.png" alt="scroll-image"></img>
         </div>
       </div>
     </div>

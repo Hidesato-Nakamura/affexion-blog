@@ -67,8 +67,11 @@ const Ranking = ({ data }) => {
 
   const pc = (
     <div className="ranking-box">
-      <div className="ranking-title-container">
-        <div className="ranking-title">RANKING</div>
+      <div className="ranking-title">
+        <img
+          src="/images/letters/ranking-title_14.png"
+          art="ranking-title"
+        ></img>
       </div>
 
       <div className="ranking-card flex">
