@@ -581,9 +581,23 @@ footer {
   }
 }
 
-.ranking-box {
+.ranking-title {
   @include mq() {
     width: 1160px;
+    margin: 100px auto 20px auto;
+  }
+  @include mq(sp) {
+    width: 100%;
+    height: auto;
+    margin-top: v(120);
+    margin-bottom: v(60);
+  }
+}
+
+.ranking-box {
+  @include mq() {
+    // width: 1160px;
+    width: 100%;
   }
   @include mq(sp) {
     width: 100%;
@@ -591,54 +605,41 @@ footer {
   }
 
   margin: auto;
-  // overflow: scroll;
-  .ranking-title {
-    @include mq() {
-      width: auto;
-      margin-top: 100px;
-      margin-bottom: 20px;
-    }
-    @include mq(sp) {
-      width: 100%;
-      height: auto;
-      margin-top: v(120);
-      margin-bottom: v(60);
-    }
-  }
 
   .ranking-card {
-    display: flex;
     @include mq() {
-      scroll-snap-type: mandatory;
-      scroll-snap-points-x: repeat(100%);
-      scroll-snap-type: x mandatory;
+      width: 100%;
       overflow: auto;
-      -ms-overflow-style: none; /* IE, Edge 対応 */
-      scrollbar-width: none;
+      // background-color: blue;
+      display: flex;
+      scroll-snap-type: x mandatory;
     }
     @include mq(sp) {
       width: 100%;
       margin: auto;
-      // background-color: red;
-      // margin: auto;
-      // margin: 0 calc(50% - 50vw);
-      // scroll-snap-type: mandatory;
-      // scroll-snap-points-x: repeat(100%);
-      // scroll-snap-type: x mandatory;
       overflow: auto;
       -ms-overflow-style: none; /* IE, Edge 対応 */
       scrollbar-width: none;
+      display: flex;
     }
-
     &::-webkit-scrollbar {
       /* Chrome, Safari 対応 */
       display: none;
+    }
+    .dummy-left {
+      min-width: calc(50% - 580px);
+      // background-color: red;
+    }
+    .dummy-right {
+      min-width: calc(50% - 635px);
+      // background-color: red;
     }
     .cards {
       @include mq() {
         width: 350px;
         min-width: 350px;
         margin-right: 55px;
+        scroll-snap-align: center;
       }
       @include mq(sp) {
         $ranking-card-width: v(490);
@@ -652,10 +653,10 @@ footer {
     }
   }
   $arrow-length: 30px;
-  $box-top: 280px;
+  $box-top: 100px;
   $arrow-length-sp: v(30);
   $box-size-sp: v(80);
-  $box-top-sp: 52%;
+  $box-top-sp: 30%;
   position: relative;
   .ranking-left-arrow {
     @include mq() {
@@ -663,7 +664,7 @@ footer {
       height: 80px;
       top: $box-top;
       opacity: 0.5;
-      left: -20px;
+      left: calc(50% - 600px);
       position: absolute;
       background-color: #000;
       display: flex;
@@ -703,7 +704,7 @@ footer {
       width: 80px;
       height: 80px;
       top: $box-top;
-      right: -20px;
+      right: calc(50% - 600px);
       position: absolute;
       background-color: #000;
       opacity: 0.5;
@@ -845,7 +846,7 @@ footer {
     }
     &::after {
       // position: absolute;
-      margin: auto 0 auto -3px;
+      margin: auto 0 auto -6px;
       display: block;
       content: "";
       width: 4px;
@@ -853,7 +854,7 @@ footer {
       border-right: 1px solid #777;
       border-top: 1px solid #777;
 
-      transform: rotate(45deg);
+      transform: rotate(45deg) translateX(50%) translateY(-50%);
     }
   }
 }

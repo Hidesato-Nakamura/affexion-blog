@@ -34,13 +34,15 @@ const rankingQl = graphql`
   }
 `
 
+let scrollIndex = 2
+let preOperation = `next`
+
 const Ranking = ({ data }) => {
   //
   const views = data.allPageViews.edges
   const posts = data.allMarkdownRemark.edges
   const max = 10
-  let scrollIndex = 0
-  let preOperation = `next`
+
   let postResults = []
   views.forEach(edge => {
     posts.forEach(post => {
@@ -50,45 +52,27 @@ const Ranking = ({ data }) => {
       }
     })
   })
-  function Arrow(type) {
-    switch (type) {
-      case `next`:
-        scrollTo(`#ScrollCard${scrollIndex}`)
-        preOperation = `next`
-        break
-      case `prev`:
-        scrollTo(`#ScrollCard${scrollIndex}`)
-        preOperation = `prev`
-        break
-      default:
-        break
-    }
-  }
 
   const pc = (
     <div className="ranking-box">
-      <div className="ranking-title">
-        <img
-          src="/images/letters/ranking-title_14.png"
-          art="ranking-title"
-        ></img>
-      </div>
-
-      <div className="ranking-card flex">
+      <div className="ranking-card">
+        <div className="dummy-left"></div>
         {postResults.map((postResult, index) => {
           return index < max ? (
-            <article key={index} className="cards">
+            <div id={`card${index}`} key={index} className="cards">
               <SubCard node={postResults[index]} rank={index + 1} />
-            </article>
+            </div>
           ) : null
         })}
+        <div className="dummy-right"></div>
       </div>
-      <div onClick={() => Arrow("prev")} className="ranking-left-arrow">
+
+      <a href={`#card${scrollIndex - 1}`} className="ranking-left-arrow">
         <div className="left-arrow"></div>
-      </div>
-      <div onClick={() => Arrow("next")} className="ranking-right-arrow">
+      </a>
+      <a href={`#card${scrollIndex + 1}`} className="ranking-right-arrow">
         <div className="right-arrow"></div>
-      </div>
+      </a>
     </div>
   )
 

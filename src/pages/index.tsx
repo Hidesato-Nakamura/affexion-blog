@@ -47,17 +47,6 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="Home" />
-      {/* <App /> */}
-      {/* <Link to="/admin/">login</Link> */}
-      {/* <Bio /> */}
-      {/* <h1>新着記事</h1>ß */}
-      {/* {posts.map(({ node }, index) => {
-        return index == 0 ? (
-          <article key={node.fields.slug}>
-            <MainCard node={node} />
-          </article>
-        ) : null
-      })} */}
       <div className="flex flex-wrap">
         {posts.map(({ node }, index) => {
           return index < num ? (
