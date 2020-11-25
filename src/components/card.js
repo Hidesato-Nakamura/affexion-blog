@@ -37,7 +37,7 @@ export const SubCard = ({ node, rank }) => {
   let card = (
     <Link to={slug} style={{ textDecoration: "none" }}>
       <section className="sub-card">
-        {rank === 0 || wi >= 750 ? (
+        {wi >= 750 || rank === 0 ? (
           <div className="card-img-block">
             <img src={frontmatter.featuredimage} alt="" />
           </div>
