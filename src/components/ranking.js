@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, StaticQuery } from "gatsby"
 import { RankingCard } from "../components/card"
 import scrollTo from "gatsby-plugin-smoothscroll"
+import Slider from "react-slick"
 
 const rankingQl = graphql`
   query rankingQl {
@@ -34,6 +35,39 @@ const rankingQl = graphql`
   }
 `
 
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props
+  return (
+    // <div
+    //   className={className}
+    //   style={{ ...style, display: "block", background: "red" }}
+    //   onClick={onClick}
+    // />
+    <div className="ranking-right-arrow" onClick={onClick}>
+      <div className="right-arrow"></div>
+    </div>
+  )
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props
+  return (
+    // <div
+    //   className={className}
+    //   style={{ ...style, display: "block", background: "green" }}
+    //   onClick={onClick}
+    // />
+
+    <div
+      className="ranking-left-arrow"
+      style={{ zIndex: 10 }}
+      onClick={onClick}
+    >
+      <div className="left-arrow"></div>
+    </div>
+  )
+}
+
 let scrollIndex = 2
 let preOperation = `next`
 
@@ -42,7 +76,18 @@ const Ranking = ({ data }) => {
   const views = data.allPageViews.edges
   const posts = data.allMarkdownRemark.edges
   const max = 10
-
+  const settings = {
+    className: "slider variable-width",
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    swipeToSlide: true,
+    variableWidth: true,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+  }
   let postResults = []
   views.forEach(edge => {
     posts.forEach(post => {
@@ -55,7 +100,7 @@ const Ranking = ({ data }) => {
 
   const pc = (
     <div className="ranking-box">
-      <div className="ranking-card">
+      {/* <div className="ranking-card">
         <div className="dummy-left"></div>
         {postResults.map((postResult, index) => {
           return index < max ? (
@@ -65,14 +110,20 @@ const Ranking = ({ data }) => {
           ) : null
         })}
         <div className="dummy-right"></div>
+      </div> */}
+      <div className="ranking-card">
+        <Slider {...settings}>
+          {postResults.map((postResult, index) => {
+            return index < max ? (
+              <div key={index}>
+                <div className="cards">
+                  <RankingCard node={postResults[index]} rank={index + 1} />
+                </div>
+              </div>
+            ) : null
+          })}
+        </Slider>
       </div>
-
-      <a href={`#card${scrollIndex - 1}`} className="ranking-left-arrow">
-        <div className="left-arrow"></div>
-      </a>
-      <a href={`#card${scrollIndex + 1}`} className="ranking-right-arrow">
-        <div className="right-arrow"></div>
-      </a>
     </div>
   )
 

@@ -651,38 +651,32 @@ footer {
 
   .ranking-card {
     @include mq() {
-      width: 100%;
-      overflow: auto;
-      // background-color: blue;
-      display: flex;
-      scroll-snap-type: x mandatory;
+      // width: 100%;
+      width: 1215px;
+      margin: 0 auto;
+      // overflow: auto;
+      // // background-color: blue;
+      // display: flex;
+      // scroll-snap-type: x mandatory;
     }
     @include mq(sp) {
       width: 100%;
       margin: auto;
-      overflow: auto;
-      -ms-overflow-style: none; /* IE, Edge 対応 */
-      scrollbar-width: none;
-      display: flex;
+      // overflow: auto;
+      // -ms-overflow-style: none; /* IE, Edge 対応 */
+      // scrollbar-width: none;
+      // display: flex;
     }
-    &::-webkit-scrollbar {
-      /* Chrome, Safari 対応 */
-      display: none;
-    }
-    .dummy-left {
-      min-width: calc(50% - 580px);
-      // background-color: red;
-    }
-    .dummy-right {
-      min-width: calc(50% - 635px);
-      // background-color: red;
-    }
+    // &::-webkit-scrollbar {
+    //   /* Chrome, Safari 対応 */
+    //   display: none;
+    // }
+
     .cards {
       @include mq() {
         width: 350px;
         min-width: 350px;
-        margin-right: 55px;
-        scroll-snap-align: center;
+        margin: 0px 27.5px;
       }
       @include mq(sp) {
         $ranking-card-width: v(490);
@@ -1297,6 +1291,19 @@ footer {
       }
     }
   }
+}
+
+.dummy-left {
+  width: calc(50% - 552.5px);
+  min-width: calc(50% - 552.5px);
+  content: "";
+  // background-color: red;
+  // color: red;
+}
+.dummy-right {
+  min-width: calc(50% - 607.5px);
+  content: "";
+  // background-color: red;
 }
 
 .taglist {
