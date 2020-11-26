@@ -17,33 +17,17 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <article>
-        <header>
-          <h1
-            style={{
-              marginTop: rhythm(1),
-              marginBottom: 0,
-            }}
-          >
-            {post.frontmatter.title}
-          </h1>
-          <p
-            style={{
-              ...scale(-1 / 5),
-              display: `block`,
-              marginBottom: rhythm(1),
-            }}
-          >
-            {post.frontmatter.date}
-          </p>
-        </header>
-        <p>閲覧数：{data.pageViews ? data.pageViews.totalCount : 0}</p>
+      <article className="blog-post">
+        <div> {post.frontmatter.title}</div>
+        <div> {post.frontmatter.date}</div>
+
+        <div>閲覧数：{data.pageViews ? data.pageViews.totalCount : 0}</div>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr
+        {/* <hr
           style={{
             marginBottom: rhythm(1),
           }}
-        />
+        /> */}
         <div>
           {tags && tags.length ? (
             <div style={{ marginTop: `4rem` }}>
@@ -67,7 +51,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             </div>
           ) : null}
 
-          <Bio />
+          {/* <Bio /> */}
         </div>
       </article>
 
@@ -114,8 +98,10 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "YY/MM/DD")
+        date(formatString: "MMMM DD. YYYY")
         description
+        contributor
+        color
         tags
       }
     }

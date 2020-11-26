@@ -78,7 +78,7 @@ main {
 }
 
 html {
-  background-color: white;
+  background-color: #f8f5f5;
 }
 
 header {
@@ -1316,4 +1316,22 @@ footer {
   flex-wrap: wrap;
   justify-content: left;
   align-items: center;
+}
+
+.blog-post {
+  background-color: #fff;
+  @include mq() {
+    width: 100%;
+    border-radius: 50px;
+    margin-top: 150px;
+    padding: 100px;
+  }
+  @include mq(sp) {
+  }
+  .title {
+  }
+  .date {
+  }
+  .profile {
+  }
 }
