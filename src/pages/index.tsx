@@ -1,6 +1,7 @@
 // Gatsby supports TypeScript natively!
 //ホームです。
 import React from "react"
+import ReactDOM from "react-dom"
 import { PageProps, Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
@@ -42,6 +43,30 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
   var w = typeof window !== `undefined` ? window : null
   var wi = typeof window !== `undefined` ? w.innerWidth : null
   var num = wi !== null && wi >= 750 ? 6 : 7
+  var add = 0
+
+  function tick() {
+    if (add < 2) {
+      num += 6
+      const element = (
+        <div className="flex flex-wrap" style={{ marginTop: 0 }}>
+          {posts.map(({ node }, index) => {
+            return index >= num - 6 && index < num ? (
+              <article key={node.fields.slug} className="sub-card-block">
+                <Card node={node} />
+              </article>
+            ) : null
+          })}
+        </div>
+      )
+      ReactDOM.render(element, document.getElementById(`readmore${add}`))
+      add++
+      if (add === 2) {
+        document.getElementById(`readmore`).remove()
+      }
+    }
+  }
+
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="Home" />
@@ -54,8 +79,10 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
           ) : null
         })}
       </div>
+      <div id="readmore0"></div>
+      <div id="readmore1"></div>
 
-      <div className="pgn flex">
+      <div className="pgn flex" id="readmore" onClick={tick}>
         <div className="read-more">READ MORE</div>
         <div className="arrow" />
       </div>

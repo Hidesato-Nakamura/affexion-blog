@@ -114,13 +114,13 @@ const Ranking = ({ data }) => {
       <div className="ranking-card">
         <Slider {...settings}>
           {postResults.map((postResult, index) => {
-            return index < max ? (
+            return (
               <div key={index}>
                 <div className="cards">
                   <RankingCard node={postResults[index]} rank={index + 1} />
                 </div>
               </div>
-            ) : null
+            )
           })}
         </Slider>
       </div>
