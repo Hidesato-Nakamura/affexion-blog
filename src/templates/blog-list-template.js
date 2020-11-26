@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import PageNation from "../components/pagination"
-import { MainCard } from "../components/card"
+import { Card } from "../components/card"
 
 import { rhythm } from "../utils/typography"
 
@@ -21,7 +21,7 @@ const BlogList = (data, pageContext, location) => {
                 marginBottom: rhythm(1 / 4),
               }}
             >
-              <MainCard node={node} />
+              <Card node={node} />
             </h3>
           </article>
         )
