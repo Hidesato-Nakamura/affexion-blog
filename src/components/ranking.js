@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
-import { SubCard } from "../components/card"
+import { RankingCard } from "../components/card"
 import scrollTo from "gatsby-plugin-smoothscroll"
 
 const rankingQl = graphql`
@@ -60,7 +60,7 @@ const Ranking = ({ data }) => {
         {postResults.map((postResult, index) => {
           return index < max ? (
             <div id={`card${index}`} key={index} className="cards">
-              <SubCard node={postResults[index]} rank={index + 1} />
+              <RankingCard node={postResults[index]} rank={index + 1} />
             </div>
           ) : null
         })}
@@ -79,9 +79,9 @@ const Ranking = ({ data }) => {
   return pc
 }
 
-export default function RankingCard() {
-  const popularCard = (
+export default function RankingQuery() {
+  const ranking = (
     <StaticQuery query={rankingQl} render={data => <Ranking data={data} />} />
   )
-  return popularCard
+  return ranking
 }

@@ -230,6 +230,7 @@ footer {
         line-height: 1.9em;
       }
       @include mq(sp) {
+        display: none;
         font-size: v(30);
         -webkit-line-clamp: 1;
       }
@@ -261,12 +262,13 @@ footer {
     }
   }
   .profile {
-    display: table;
     @include mq() {
+      display: table;
       margin-top: 12px;
       padding: auto;
     }
     @include mq(sp) {
+      display: none;
       margin-top: v(12);
     }
     .avatar {
@@ -300,6 +302,10 @@ footer {
   //携帯かつランキングではない時だけ表示
   .profile2 {
     display: table;
+    //pcは非表示
+    @include mq() {
+      display: none;
+    }
     @include mq(sp) {
       position: absolute;
       right: 0px;
@@ -309,6 +315,43 @@ footer {
       @include mq(sp) {
         width: v(35);
         height: v(35);
+      }
+
+      background-color: #219ddd;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    .name {
+      color: #a8a8a8;
+      display: table-cell;
+      font-weight: bold;
+      vertical-align: middle;
+      // font-size: 12px;
+      @include mq() {
+        font-size: 14px;
+      }
+      @include mq(sp) {
+        font-size: v(20);
+      }
+    }
+  }
+  .profile3 {
+    display: table;
+    @include mq() {
+      margin-top: 12px;
+      padding: auto;
+    }
+    @include mq(sp) {
+      margin-top: v(12);
+    }
+    .avatar {
+      @include mq() {
+        width: 29px;
+        height: 29px;
+      }
+      @include mq(sp) {
+        width: v(38);
+        height: v(38);
       }
 
       background-color: #219ddd;
