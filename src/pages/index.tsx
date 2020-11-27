@@ -82,9 +82,8 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
       <div id="readmore0"></div>
       <div id="readmore1"></div>
 
-      <div className="pgn flex" id="readmore" onClick={tick}>
-        <div className="read-more">READ MORE</div>
-        <div className="arrow" />
+      <div className="readmore" id="readmore" onClick={tick}>
+        <img src="/images/readmore.png"></img>
       </div>
     </Layout>
   )

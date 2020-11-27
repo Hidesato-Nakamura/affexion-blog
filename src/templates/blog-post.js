@@ -64,28 +64,33 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 
       <nav
         style={{
+          display: `none`,
           flexWrap: `wrap`,
           listStyle: `none`,
           padding: 0,
-          marginBottom: 200,
+          marginBottom: 50,
         }}
       >
         <div style={{ float: "left" }}>
           {next && (
             <Link to={next.fields.slug} rel="next">
-              {/* {next.frontmatter.title} → */}← next
+              ← next
             </Link>
           )}
         </div>
         <div style={{ float: "right" }}>
           {previous && (
             <Link to={previous.fields.slug} rel="prev">
-              {/* ← {previous.frontmatter.title} */}
               prev →
             </Link>
           )}
         </div>
       </nav>
+      <div style={{ textAlign: `center`, marginTop: `70px` }}>
+        <Link to="/">
+          <img style={{ marginBottom: 0 }} src="/images/toppage.png" />
+        </Link>
+      </div>
     </Layout>
   )
 }

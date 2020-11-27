@@ -89,7 +89,7 @@ header {
   @include mq() {
     background: url("/images/gumma_05.png") no-repeat;
     background-size: cover;
-    min-width: 1200px;
+    min-width: 1220px;
   }
   @include mq(sp) {
     background: url("/images/gumma_05.png") no-repeat;
@@ -823,76 +823,14 @@ footer {
   }
 }
 
-.pgn {
-  justify-content: center;
-  color: #777;
-  display: flex;
+.readmore {
+  text-align: center;
   @include mq() {
-    border-radius: 30px;
-    margin: -13px auto 25px;
-    width: 250px;
-    padding: 8px 20px 8px;
-    border: 1px solid #777;
   }
   @include mq(sp) {
-    // height: v(30);
-    border-radius: v(1000);
-    margin: v(145) auto v(45);
-    width: 65%;
-    padding: v(15) v(24) v(15);
-    border: 1px solid #777;
   }
-  .read-more {
-    font-family: "aktiv-grotesk";
-    justify-content: center;
-    text-align: center;
-    @include mq() {
-      font-size: 18px;
-      letter-spacing: 1.5px;
-      margin-left: -10px;
-    }
-    @include mq(sp) {
-      font-size: v(35);
-      letter-spacing: v(2);
-      margin-left: -10px;
-    }
-  }
-  .arrow {
-    position: relative;
-    display: flex;
-
-    @include mq() {
-      margin-left: v(3);
-    }
-    @include mq(sp) {
-      margin-left: v(20);
-    }
-    &::before {
-      margin: auto 0 auto;
-      display: block;
-      content: "";
-      background: #777;
-      @include mq() {
-        width: 25px;
-        height: 1px;
-      }
-      @include mq(sp) {
-        width: v(55);
-        height: 1px;
-      }
-    }
-    &::after {
-      // position: absolute;
-      margin: auto 0 auto -6px;
-      display: block;
-      content: "";
-      width: 4px;
-      height: 4px;
-      border-right: 1px solid #777;
-      border-top: 1px solid #777;
-
-      transform: rotate(45deg) translateX(50%) translateY(-50%);
-    }
+  img {
+    margin: 0px auto 0px auto;
   }
 }
 
@@ -902,7 +840,7 @@ footer {
 
 #header-box {
   @include mq() {
-    min-width: 1200px;
+    min-width: 1220px;
     height: 360px;
     background: url("/images/header.png") no-repeat;
     background-size: cover;
@@ -1204,7 +1142,7 @@ footer {
 
 .footer-box {
   @include mq() {
-    min-width: 1200px;
+    min-width: 1220px;
   }
   @include mq(sp) {
     // min-width: 1200px;
