@@ -1257,6 +1257,7 @@ footer {
   .title {
     @include mq() {
       font-size: 32px;
+      font-weight: bold;
     }
     @include mq(sp) {
     }

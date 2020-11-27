@@ -3,13 +3,20 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+import {
+  FacebookShareButton,
+  FacebookIcon,
+  TwitterShareButton,
+  TwitterIcon,
+} from "react-share"
+
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
-  const siteTitle = data.site.siteMetadata.title
+  const { title, siteUrl } = data.site.siteMetadata
   const { previous, next } = pageContext
   const tags = post.frontmatter.tags
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} title={title}>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
@@ -26,10 +33,10 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         </div>
 
         {/* <div>閲覧数：{data.pageViews ? data.pageViews.totalCount : 0}</div> */}
-        <span
-          className="text"
-          dangerouslySetInnerHTML={{ __html: post.html }}
-        />
+        <div className="text">
+          <span dangerouslySetInnerHTML={{ __html: post.html }} />
+        </div>
+
         {/* <hr
           style={{
             marginBottom: rhythm(1),
@@ -52,8 +59,23 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             ))}
             <div className="images">
               <img src="/images/icons/webyounihozon.png" />
-              <img src="/images/icons/twitter_05.png" />
-              <img src="/images/icons/facebook.png" />
+              {/* <a
+                href={`https://${siteUrl}${location.pathname}`}
+                class="react-sharing-button__link react-sharing-button--twitter"
+              >
+                <img src="/images/icons/twitter_05.png" />
+              </a> */}
+              <TwitterShareButton
+                text={`none`}
+                url={`${siteUrl}${location.pathname}`}
+                shareText={`${post.frontmatter.title}--${title}`}
+                via={`affexionAR`}
+              >
+                <img src="/images/icons/twitter_05.png" />
+              </TwitterShareButton>
+              <FacebookShareButton url={`${siteUrl}${location.pathname}`}>
+                <img src="/images/icons/facebook.png" />
+              </FacebookShareButton>
             </div>
           </ul>
         ) : null}
