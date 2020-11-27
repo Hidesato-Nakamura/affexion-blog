@@ -18,41 +18,48 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         description={post.frontmatter.description || post.excerpt}
       />
       <article className="blog-post">
-        <div> {post.frontmatter.title}</div>
-        <div> {post.frontmatter.date}</div>
+        <div className="title"> {post.frontmatter.title}</div>
+        <div className="infomations">
+          <div className="date"> {post.frontmatter.date}</div>
+          <div
+            className="avatar"
+            style={{ backgroundColor: post.frontmatter.color }}
+          ></div>
+          <div className="name">{post.frontmatter.contributor}</div>
+        </div>
 
-        <div>閲覧数：{data.pageViews ? data.pageViews.totalCount : 0}</div>
-        <section dangerouslySetInnerHTML={{ __html: post.html }} />
+        {/* <div>閲覧数：{data.pageViews ? data.pageViews.totalCount : 0}</div> */}
+        <section
+          className="text"
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        />
         {/* <hr
           style={{
             marginBottom: rhythm(1),
           }}
         /> */}
-        <div>
-          {tags && tags.length ? (
-            <div style={{ marginTop: `4rem` }}>
-              <h4>カテゴリ</h4>
-              <ul className="taglist">
-                {tags.map((tag, index) => (
-                  <Link to={`/tags/${tag}`} key={tag + `tag` + index}>
-                    <li
-                      style={{
-                        padding: "0 2rem 1rem 0",
-                        marginBottom: "1.5rem",
-                        marginTop: "0",
-                      }}
-                    >
-                      {tag}
-                      {/* <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link> */}
-                    </li>
-                  </Link>
-                ))}
-              </ul>
-            </div>
-          ) : null}
 
-          {/* <Bio /> */}
-        </div>
+        {tags && tags.length ? (
+          <ul className="taglist">
+            {tags.map((tag, index) => (
+              <Link
+                to={`/tags/${tag}`}
+                key={tag + `tag` + index}
+                style={{ textDecorationColor: `#a8a8a8` }}
+              >
+                <li>
+                  #{tag}
+                  {/* <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link> */}
+                </li>
+              </Link>
+            ))}
+            <div className="images">
+              <img src="/images/icons/webyounihozon.png" />
+              <img src="/images/icons/twitter_05.png" />
+              <img src="/images/icons/facebook.png" />
+            </div>
+          </ul>
+        ) : null}
       </article>
 
       <nav

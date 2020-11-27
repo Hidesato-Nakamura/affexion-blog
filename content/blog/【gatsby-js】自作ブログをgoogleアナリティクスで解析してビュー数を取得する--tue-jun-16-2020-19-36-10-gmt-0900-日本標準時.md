@@ -3,6 +3,7 @@ templateKey: blog-post
 title: 【Gatsby.js】自作ブログをGoogleアナリティクスで解析してビュー数を取得する
 description: 今までWordPressなどを使っていたけど、自社の都合上他のCMSに移行したい・・・ そうだ、流行りのGatsbyを使おう！
 contributor: ダミー・ダミお
+color: "#ff0000"
 tags:
   - 動物
   - hello
