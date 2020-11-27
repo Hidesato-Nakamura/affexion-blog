@@ -1,10 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm, scale } from "../utils/typography"
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
@@ -29,7 +26,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         </div>
 
         {/* <div>閲覧数：{data.pageViews ? data.pageViews.totalCount : 0}</div> */}
-        <section
+        <span
           className="text"
           dangerouslySetInnerHTML={{ __html: post.html }}
         />

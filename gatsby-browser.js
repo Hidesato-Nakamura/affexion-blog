@@ -7,3 +7,5 @@ import "./src/styles/global.scss"
 import "./src/styles/pagenation.css"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
+
+import "prismjs/themes/prism-tomorrow.css"
