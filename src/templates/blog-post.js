@@ -3,16 +3,12 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import {
-  FacebookShareButton,
-  FacebookIcon,
-  TwitterShareButton,
-  TwitterIcon,
-} from "react-share"
+import { FacebookShareButton, TwitterShareButton } from "react-share"
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   const { title, siteUrl } = data.site.siteMetadata
+  console.log(data.site)
   const { previous, next } = pageContext
   const tags = post.frontmatter.tags
   return (
@@ -68,7 +64,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               <TwitterShareButton
                 text={`none`}
                 url={`${siteUrl}${location.pathname}`}
-                shareText={`${post.frontmatter.title}--${title}`}
+                // shareText={`${post.frontmatter.title}--${title}`}
                 via={`affexionAR`}
               >
                 <img src="/images/icons/twitter_05.png" />

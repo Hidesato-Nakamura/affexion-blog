@@ -16,6 +16,10 @@ type Data = {
   site: {
     siteMetadata: {
       title: string
+      siteUrl: string
+      social: {
+        twitter: string
+      }
     }
   }
   allMarkdownRemark: {
@@ -96,6 +100,10 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        siteUrl
+        social {
+          twitter
+        }
       }
     }
     allMarkdownRemark(

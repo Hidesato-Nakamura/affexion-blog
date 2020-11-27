@@ -8,13 +8,13 @@ module.exports = {
   siteMetadata: {
     title: `AFFEXION BLOG`,
     author: {
-      name: `テスト`,
+      name: `Taeko Shizuka`,
       summary: `who lives and works in Tomioka city building useful things.`,
     },
     description: `affexion-blog`,
-    siteUrl: `https://dreamy-cray-965523.netlify.app/`,
+    siteUrl: `https://affexion-blog.netlify.app/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `affexionAR`,
     },
   },
   plugins: [
