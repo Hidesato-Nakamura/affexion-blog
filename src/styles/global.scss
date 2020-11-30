@@ -830,7 +830,12 @@ footer {
   @include mq(sp) {
   }
   img {
-    height: v(100);
+    @include mq() {
+    }
+    @include mq(sp) {
+      height: v(100);
+    }
+
     margin: 0px auto 0px auto;
   }
 }
