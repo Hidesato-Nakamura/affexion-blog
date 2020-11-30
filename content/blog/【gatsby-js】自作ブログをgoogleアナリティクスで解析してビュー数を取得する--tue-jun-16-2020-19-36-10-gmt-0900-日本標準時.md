@@ -2,8 +2,8 @@
 templateKey: blog-post
 title: 自作ブログをGoogleアナリティクスで解析してビュー数を取得する
 description: 今までWordPressなどを使っていたけど、自社の都合上他のCMSに移行したい・・・ そうだ、流行りのGatsbyを使おう！
-contributor: ダミー・ダミお
-color: "#ff0000"
+contributor: Kazuma Kanai
+color: "#f654ff"
 tags:
   - google
   - gatsby.js
