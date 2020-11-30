@@ -102,6 +102,10 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        siteUrl
+        social {
+          twitter
+        }
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
