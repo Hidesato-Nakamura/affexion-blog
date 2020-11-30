@@ -35,6 +35,9 @@ const CategoryBarContents = ({ data }) => {
       tags = tags.concat(edge.node.frontmatter.tags)
     }
   })
+  tags.forEach((tag, index) => {
+    tags[index] = tag.toLowerCase()
+  })
   tags = _.uniq(tags)
 
   let tagsList = []

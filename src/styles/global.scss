@@ -830,6 +830,7 @@ footer {
   @include mq(sp) {
   }
   img {
+    height: v(100);
     margin: 0px auto 0px auto;
   }
 }
@@ -1107,9 +1108,11 @@ footer {
       margin: auto;
       text-align: center;
       @include mq() {
+        margin-left: 4px;
         margin-bottom: 25px;
       }
       @include mq(sp) {
+        margin-left: v(8);
         margin-bottom: 0px;
       }
 
@@ -1253,13 +1256,18 @@ footer {
     padding: 140px;
   }
   @include mq(sp) {
+    width: 88%;
+    border-radius: v(50);
+    margin: v(150) auto 0px;
+    padding: v(60) v(50);
   }
   .title {
+    font-weight: bold;
     @include mq() {
       font-size: 32px;
-      font-weight: bold;
     }
     @include mq(sp) {
+      font-size: v(42);
     }
   }
 
@@ -1269,11 +1277,14 @@ footer {
       margin-top: 10px;
     }
     @include mq(sp) {
+      display: flex;
+      margin-top: v(15);
     }
     .date {
       @include mq() {
       }
       @include mq(sp) {
+        font-size: v(22);
       }
     }
     .avatar {
@@ -1285,50 +1296,130 @@ footer {
         margin: auto 10px auto 20px;
       }
       @include mq(sp) {
+        width: v(30);
+        height: v(30);
+        border-radius: 50%;
+        background-color: #219ddd;
+        margin: auto 10px auto 20px;
       }
     }
     .name {
+      color: #a8a8a8;
       @include mq() {
         font-size: 18px;
       }
       @include mq(sp) {
+        font-size: v(22);
       }
     }
   }
 
   .text {
+    // line-height: 0px;
     @include mq() {
       margin-top: 25px;
     }
     @include mq(sp) {
+      margin-top: v(25);
     }
   }
   ul.taglist {
+    list-style: none;
+    display: flex;
     @include mq() {
       margin: 60px auto 0px 0px;
       font-size: 14px;
-      list-style: none;
-      display: flex;
       position: relative;
     }
     @include mq(sp) {
+      margin: v(20) auto v(50) -1.5vw;
+      font-size: v(20);
+      position: relative;
     }
     Link {
     }
     li {
       color: #a8a8a8;
       text-decoration: none;
-      margin-right: 20px;
-      margin-bottom: 0px;
+      @include mq() {
+        margin-right: 20px;
+        margin-bottom: 0px;
+      }
+      @include mq(sp) {
+        margin-right: v(20);
+        margin-bottom: 0px;
+      }
     }
   }
   .images {
-    position: absolute;
-
-    right: 0px;
+    @include mq() {
+      position: absolute;
+      right: 0px;
+    }
+    @include mq(sp) {
+      position: absolute;
+      right: 0px;
+      bottom: -10vw;
+    }
     img {
-      margin-left: 15px;
-      margin-bottom: 0px;
+      @include mq() {
+        margin-left: 15px;
+        margin-bottom: 0px;
+      }
+      @include mq(sp) {
+        margin-left: v(12);
+        height: v(45);
+        margin-bottom: 0px;
+      }
+    }
+  }
+}
+
+.nav {
+  display: -webkit-flex;
+  display: flex;
+
+  @include mq() {
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    margin-top: 60px;
+  }
+  @include mq(sp) {
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    align-items: center;
+    width: 88%;
+    margin: v(50) auto 0;
+  }
+  img {
+    margin-bottom: 0px;
+  }
+  .back {
+    @include mq() {
+    }
+    @include mq(sp) {
+    }
+    img {
+      margin-top: -10px;
+      margin-right: 20px;
+    }
+  }
+  .next {
+    @include mq() {
+    }
+    @include mq(sp) {
+    }
+    img {
+      margin-top: -10px;
+      margin-left: 20px;
+    }
+  }
+  .toppage {
+    @include mq() {
+    }
+    @include mq(sp) {
     }
   }
 }

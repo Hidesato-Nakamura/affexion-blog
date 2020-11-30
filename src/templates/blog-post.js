@@ -54,58 +54,43 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               </Link>
             ))}
             <div className="images">
-              <img src="/images/icons/webyounihozon.png" />
-              {/* <a
-                href={`https://${siteUrl}${location.pathname}`}
-                class="react-sharing-button__link react-sharing-button--twitter"
-              >
-                <img src="/images/icons/twitter_05.png" />
-              </a> */}
+              <img src="/images/icons/webyounihozon.png" alt="webyounihozon" />
               <TwitterShareButton
                 text={`none`}
                 url={`${siteUrl}${location.pathname}`}
-                // shareText={`${post.frontmatter.title}--${title}`}
                 via={`affexionAR`}
               >
-                <img src="/images/icons/twitter_05.png" />
+                <img src="/images/icons/twitter_05.png" alt="twitter" />
               </TwitterShareButton>
               <FacebookShareButton url={`${siteUrl}${location.pathname}`}>
-                <img src="/images/icons/facebook.png" />
+                <img src="/images/icons/facebook.png" alt="facebook" />
               </FacebookShareButton>
             </div>
           </ul>
         ) : null}
       </article>
 
-      <nav
-        style={{
-          display: `none`,
-          flexWrap: `wrap`,
-          listStyle: `none`,
-          padding: 0,
-          marginBottom: 50,
-        }}
-      >
-        <div style={{ float: "left" }}>
-          {next && (
-            <Link to={next.fields.slug} rel="next">
-              ← next
+      <nav className="nav">
+        <div className="back">
+          {previous && (
+            <Link to={previous.fields.slug} rel="prev">
+              <img alt="back" src="/images/back_03.png"></img>
             </Link>
           )}
         </div>
-        <div style={{ float: "right" }}>
-          {previous && (
-            <Link to={previous.fields.slug} rel="prev">
-              prev →
+        <div className="toppage">
+          <Link to="/">
+            <img src="/images/toppage.png" alt="toppage" />
+          </Link>
+        </div>
+        <div className="next">
+          {next && (
+            <Link to={next.fields.slug} rel="next">
+              <img alt="prev" src="/images/next_03.png"></img>
             </Link>
           )}
         </div>
       </nav>
-      <div style={{ textAlign: `center`, marginTop: `70px` }}>
-        <Link to="/">
-          <img style={{ marginBottom: 0 }} src="/images/toppage.png" />
-        </Link>
-      </div>
     </Layout>
   )
 }

@@ -27,7 +27,7 @@ const Layout = ({ location, title, children }) => {
         <div className="ranking-title">
           <img
             src="/images/letters/ranking-title_14.png"
-            art="ranking-title"
+            alt="ranking-title"
           ></img>
         </div>
         <Ranking />

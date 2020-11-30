@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
-title: ps5買いました
-description: 実は買えませんでした
+title: マークダウン書式テスト
+description: マークダウンファイルです。
 contributor: Kazuma Kanai
 color: "#8cf3ff"
 tags:

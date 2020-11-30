@@ -50,7 +50,10 @@ const Header = () => {
           <img src="/images/letters/blog-title_11.png" alt="blog-title"></img>
         </div>
         <div className="scroll-image">
-          <img src="/images/scroll-image_11.png" alt="scroll-image"></img>
+          <img
+            src="/images/scroll-nigiyakashi.png"
+            alt="scroll-nigiyakashi"
+          ></img>
         </div>
       </div>
     </div>

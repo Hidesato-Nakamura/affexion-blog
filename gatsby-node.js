@@ -57,6 +57,11 @@ exports.createPages = async ({ graphql, actions }) => {
       tags = tags.concat(edge.node.frontmatter.tags)
     }
   })
+
+  // tags.forEach((tag, index) => {
+  //   tags[index] = tag.toLowerCase()
+  // })
+  console.log(tags)
   tags = _.uniq(tags)
   // let tagPath = path.resolve(`/tags/${tag}`)
   tags.forEach(tag => {

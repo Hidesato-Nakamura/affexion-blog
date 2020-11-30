@@ -35,6 +35,10 @@ export const RankingCard = ({ node, rank }) => {
 export const Card = ({ node }) => {
   const frontmatter = node.frontmatter
   const slug = node.fields.slug
+  var tags = frontmatter.tags
+  tags.forEach((tag, index) => {
+    tags[index] = tag.toLowerCase()
+  })
   let card = (
     <Link to={slug} style={{ textDecoration: "none" }}>
       <section className="sub-card">

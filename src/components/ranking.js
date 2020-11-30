@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
 import { RankingCard } from "../components/card"
-import scrollTo from "gatsby-plugin-smoothscroll"
+// import scrollTo from "gatsby-plugin-smoothscroll"
 import Slider from "react-slick"
 
 const rankingQl = graphql`
@@ -36,21 +36,27 @@ const rankingQl = graphql`
 `
 
 function SampleNextArrow(props) {
-  const { className, style, onClick } = props
+  const { onClick } = props
   return (
     // <div
     //   className={className}
     //   style={{ ...style, display: "block", background: "red" }}
     //   onClick={onClick}
     // />
-    <div className="ranking-right-arrow" onClick={onClick}>
+    <div
+      className="ranking-right-arrow"
+      role="button"
+      tabIndex="0"
+      onClick={onClick}
+      onKeyDown={function () {}}
+    >
       <div className="right-arrow"></div>
     </div>
   )
 }
 
 function SamplePrevArrow(props) {
-  const { className, style, onClick } = props
+  const { onClick } = props
   return (
     // <div
     //   className={className}
@@ -61,21 +67,21 @@ function SamplePrevArrow(props) {
     <div
       className="ranking-left-arrow"
       style={{ zIndex: 10 }}
+      role="button"
+      tabIndex="0"
       onClick={onClick}
+      onKeyDown={function () {}}
     >
       <div className="left-arrow"></div>
     </div>
   )
 }
 
-let scrollIndex = 2
-let preOperation = `next`
-
 const Ranking = ({ data }) => {
   //
   const views = data.allPageViews.edges
   const posts = data.allMarkdownRemark.edges
-  const max = 10
+  // const max = 10
   const settings = {
     className: "slider variable-width",
     dots: false,
