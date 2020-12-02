@@ -2,6 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Img from "gatsby-image"
 
 import { FacebookShareButton, TwitterShareButton } from "react-share"
 
@@ -17,6 +18,10 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
+      {/* <Img
+        fluid={data.file.childImageSharp.fluid}
+        alt="A corgi smiling happily"
+      /> */}
       <article className="blog-post">
         <div className="title"> {post.frontmatter.title}</div>
         <div className="infomations">
@@ -99,6 +104,13 @@ export default BlogPostTemplate
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
+    file(relativePath: { eq: "affexion-icon.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
     site {
       siteMetadata {
         title

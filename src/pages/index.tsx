@@ -7,6 +7,7 @@ import { PageProps, Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Card } from "../components/card"
+
 // import Ranking from "../components/ranking"
 // import PageNation from "../components/pagination"
 
