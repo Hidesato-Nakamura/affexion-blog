@@ -1,14 +1,14 @@
 ---
 templateKey: blog-post
-title: マークダウン書式テスト
+title: InDesignとは
 description: マークダウンファイルです。
 contributor: Kazuma Kanai
-color: "#8cf3ff"
+color: "#10ff4a"
 tags:
-  - ぴえん
-  - Emoji
+  - indesign
+  - mac
 date: 2020-11-27T06:39:43.788Z
-featuredimage: /images/uploads/pien_tex.png
+featuredimage: /images/uploads/acb81169f1db4139035e028617bafdd7.png
 ---
 
 ## menu
