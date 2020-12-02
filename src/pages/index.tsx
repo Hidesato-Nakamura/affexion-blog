@@ -89,7 +89,7 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
       <div id="readmore1"></div>
 
       <div className="readmore" id="readmore" onClick={tick}>
-        <Image filename="readmore.png" />
+        <Image filename="read_more.png" />
         {/* <img src="/images/readmore.png"></img> */}
       </div>
     </Layout>

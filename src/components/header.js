@@ -13,9 +13,8 @@ const Header = () => {
       {/* <img src="/images/header.png"></img> */}
       <div className="content-width">
         <Link to="/">
-          <div className="home-links1 flex">
-            <img src="/images/icons/affexion.png" alt="" />
-            <div className="affexion">AFFEXION</div>
+          <div className="logo">
+            <Image filename="affexion-logo.png" />
           </div>
         </Link>
         <Link to="/cccccc--tue-jun-02-2020-18-33-19-gmt-0900-日本標準時/">

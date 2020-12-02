@@ -1,5 +1,3 @@
-@import url("https://use.typekit.net/jwl1yle.css");
-
 @function v($size, $viewport: 750) {
   $rate: 100 / $viewport;
   @return decimal-round($rate * $size * 1vw);
@@ -825,7 +823,7 @@ footer {
     width: 251px;
   }
   @include mq(sp) {
-    width: v(500);
+    width: v(450);
   }
   img {
     @include mq() {
@@ -870,48 +868,18 @@ footer {
       width: 100%;
       height: 100%;
     }
-    .home-links1 {
-      color: black;
+
+    .logo {
       position: absolute;
-      display: flex;
-      align-items: center;
       @include mq() {
+        width: 151px;
         left: 0;
         top: 35px;
       }
       @include mq(sp) {
+        width: v(250);
         left: v(45);
-        top: v(45);
-      }
-
-      img {
-        @include mq() {
-          margin: 0;
-          width: 18px;
-          height: 18px;
-        }
-        @include mq(sp) {
-          margin: 0;
-          width: v(40);
-          height: v(40);
-        }
-      }
-      .affexion {
-        font-family: "aktiv-grotesk";
-        font-weight: normal;
-
-        @include mq() {
-          line-height: 18px;
-          font-size: 16px;
-          margin-left: 20px;
-          letter-spacing: 5px;
-        }
-        @include mq(sp) {
-          font-size: v(30);
-          letter-spacing: v(8);
-          line-height: v(30);
-          margin-left: v(35);
-        }
+        top: v(39);
       }
     }
     .home-links2 {
