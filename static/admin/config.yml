@@ -2,8 +2,8 @@ backend:
   name: git-gateway
   branch: master
 locale: "ja"
-media_folder: static/images/uploads
-public_folder: /images/uploads
+media_folder: content/images/
+public_folder: content/images/
 
 collections:
   - name: "blog"
