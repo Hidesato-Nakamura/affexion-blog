@@ -376,7 +376,7 @@ footer {
     }
   }
   .card-img-block {
-    background-color: blue;
+    // background-color: blue;
     overflow: hidden;
     @include mq() {
       width: 350px;
@@ -405,7 +405,7 @@ footer {
   //750px以下かつ携帯
   .card-img-block2 {
     position: relative;
-    background-color: blue;
+    // background-color: blue;
     overflow: hidden;
     @include mq() {
       // width: 5000px;
