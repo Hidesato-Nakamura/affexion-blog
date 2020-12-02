@@ -1011,7 +1011,7 @@ footer {
       width: 483px;
       transform: translateY(50%);
       position: absolute;
-      bottom: -18px;
+      bottom: 0px;
       left: 50%;
     }
     @include mq(sp) {
@@ -1038,7 +1038,7 @@ footer {
       transform: translateY(50%);
       position: absolute;
       right: 0px;
-      bottom: -20px;
+      bottom: 0px;
     }
     @include mq(sp) {
       position: absolute;
