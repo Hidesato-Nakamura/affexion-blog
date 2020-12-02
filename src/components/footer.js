@@ -1,13 +1,26 @@
 import React from "react"
+import Image from "./customImage"
 
 export default function Footer() {
   return (
     <div className="footer-box">
       <div className="links">
         <div className="official-site">official site</div>
-        <img src="/images/icons/email.png" alt="" />
+        <div className="contact-infomation">
+          <Image filename="email.png" />
+        </div>
+        <div className="contact-infomation">
+          <Image filename="twitter.png" />
+        </div>
+        <div className="contact-infomation">
+          <Image filename="instagram.png" />
+        </div>
+        {/* <div>
+      <Image filename="email.png"/>
+      </div> */}
+        {/* <img src="/images/icons/email.png" alt="" />
         <img src="/images/icons/twitter.png" alt="" />
-        <img src="/images/icons/instagram.png" alt="" />
+        <img src="/images/icons/instagram.png" alt="" /> */}
       </div>
       <div className="infomations">
         <div className="adresses">

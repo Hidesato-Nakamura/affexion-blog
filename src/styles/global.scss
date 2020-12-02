@@ -58,6 +58,9 @@ dd {
 dt {
   position: absolute;
 }
+img {
+  margin-bottom: 0px;
+}
 main {
   @include mq() {
     width: 1160px;
@@ -373,65 +376,57 @@ footer {
     }
   }
   .card-img-block {
-    position: relative;
+    background-color: blue;
+    overflow: hidden;
     @include mq() {
+      width: 350px;
       height: 258px;
+      border-radius: 30px;
     }
     @include mq(sp) {
-      // height: 100px;
-      padding-bottom: 59%;
+      height: v(450);
+      // padding-bottom: 59%;
+      border-radius: v(50);
+    }
+
+    div {
+      width: 100% !important;
+      height: 100% !important;
     }
 
     img {
       @include mq() {
-        border-radius: 30px;
       }
       @include mq(sp) {
-        border-radius: v(50);
       }
-
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
     }
   }
 
   //750px以下かつ携帯
   .card-img-block2 {
     position: relative;
+    background-color: blue;
+    overflow: hidden;
     @include mq() {
+      // width: 5000px;
+      border-radius: 30px;
       height: 258px;
     }
     @include mq(sp) {
-      // height: 100px;
-      padding-bottom: 74%;
+      height: v(350);
+      border-radius: v(50);
+      // padding-bottom: 74%;
       margin-bottom: v(10);
+    }
+    div {
+      width: 100% !important;
+      height: 100% !important;
     }
 
     img {
       @include mq() {
-        border-radius: 30px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
       }
       @include mq(sp) {
-        border-radius: v(50);
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
       }
     }
   }
@@ -825,15 +820,18 @@ footer {
 
 .readmore {
   text-align: center;
+  margin: auto;
   @include mq() {
+    width: 251px;
   }
   @include mq(sp) {
+    width: v(500);
   }
   img {
     @include mq() {
     }
     @include mq(sp) {
-      height: v(100);
+      // height: v(100);
     }
 
     margin: 0px auto 0px auto;
@@ -945,17 +943,18 @@ footer {
           font-size: v(20);
         }
       }
-      img {
+      .contact-infomation {
         @include mq() {
+          // position: relative !important;
           padding: 0;
-          // width: 18px;
-          height: 18px;
+          width: 18px;
+          // height: 18px;
           margin: auto 5px auto 18px;
         }
         @include mq(sp) {
           padding: 0;
-          height: v(25);
-          margin: auto 5px auto 18px;
+          width: v(30);
+          margin: auto 5px auto v(20);
         }
       }
     }
@@ -1009,6 +1008,7 @@ footer {
   }
   .header-blog {
     @include mq() {
+      width: 483px;
       transform: translateY(50%);
       position: absolute;
       bottom: -18px;
@@ -1182,19 +1182,20 @@ footer {
       }
     }
 
-    img {
-      filter: invert(1);
+    .contact-infomation {
       @include mq() {
-        // width: 18px;
-        height: 18px;
+        width: 22px;
+        // height: 18px;
         padding: 0;
-        margin: auto 0px auto 15px;
+        margin: auto 0px auto 18px;
       }
       @include mq(sp) {
-        // width: v(15);
-        height: v(30);
+        width: v(35);
         padding: 0;
-        margin: auto 0px auto v(35);
+        margin: auto 0px auto v(32);
+      }
+      img {
+        filter: invert(1) !important;
       }
     }
   }

@@ -1,6 +1,7 @@
 import React from "react"
 // import { rhythm, scale } from "../utils/typography"
 import { Link } from "gatsby"
+import Image from "./customImage.js"
 
 const Header = () => {
   let header
@@ -20,9 +21,19 @@ const Header = () => {
         <Link to="/cccccc--tue-jun-02-2020-18-33-19-gmt-0900-日本標準時/">
           <div className="home-links2 flex">
             <div className="offical-site">official site</div>
-            <img src="/images/icons/email.png" alt="" />
+            <div className="contact-infomation">
+              <Image filename="email.png" />
+            </div>
+            <div className="contact-infomation">
+              <Image filename="twitter.png" />
+            </div>
+            <div className="contact-infomation">
+              <Image filename="instagram.png" />
+            </div>
+
+            {/* <img src="/images/icons/email.png" alt="" />
             <img src="/images/icons/twitter.png" alt="" />
-            <img src="/images/icons/instagram.png" alt="" />
+            <img src="/images/icons/instagram.png" alt="" /> */}
           </div>
         </Link>
         {/* <Link to="/admin">
@@ -47,13 +58,10 @@ const Header = () => {
           <span>新たな表現を目標とします。</span>
         </div>
         <div className="header-blog">
-          <img src="/images/letters/blog-title_11.png" alt="blog-title"></img>
+          <Image filename="blog-title_11.png" />
         </div>
         <div className="scroll-image">
-          <img
-            src="/images/scroll-nigiyakashi.png"
-            alt="scroll-nigiyakashi"
-          ></img>
+          <Image filename="scroll-nigiyakashi.png" />
         </div>
       </div>
     </div>

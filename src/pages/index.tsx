@@ -7,6 +7,7 @@ import { PageProps, Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Card } from "../components/card"
+import Image from "../components/customImage.js"
 
 // import Ranking from "../components/ranking"
 // import PageNation from "../components/pagination"
@@ -88,7 +89,8 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
       <div id="readmore1"></div>
 
       <div className="readmore" id="readmore" onClick={tick}>
-        <img src="/images/readmore.png"></img>
+        <Image filename="readmore.png" />
+        {/* <img src="/images/readmore.png"></img> */}
       </div>
     </Layout>
   )

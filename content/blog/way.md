@@ -8,7 +8,7 @@ tags:
   - indesign
   - mac
 date: 2020-11-27T06:39:43.788Z
-featuredimage: /images/uploads/acb81169f1db4139035e028617bafdd7.png
+featuredimage: acb81169f1db4139035e028617bafdd7.png
 ---
 
 ## menu

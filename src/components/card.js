@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import Image from "../components/customFitImage"
 
 export const RankingCard = ({ node, rank }) => {
   const frontmatter = node.frontmatter
@@ -8,7 +9,8 @@ export const RankingCard = ({ node, rank }) => {
     <Link to={slug} style={{ textDecoration: "none" }}>
       <section className="sub-card">
         <div className="card-img-block2">
-          <img src={frontmatter.featuredimage} alt="" />
+          <Image filename={frontmatter.featuredimage} />
+          {/* <img src= alt="" /> */}
         </div>
 
         <div className="card-content">
@@ -43,7 +45,7 @@ export const Card = ({ node }) => {
     <Link to={slug} style={{ textDecoration: "none" }}>
       <section className="sub-card">
         <div className="card-img-block">
-          <img src={frontmatter.featuredimage} alt="" />
+          <Image filename={frontmatter.featuredimage} />
         </div>
         <div className="card-content">
           <div className="date">{frontmatter.date}</div>
