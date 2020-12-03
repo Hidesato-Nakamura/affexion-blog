@@ -11,6 +11,13 @@ const Header = () => {
     <div id="header-box">
       {/* <div className="home-header"></div> */}
       {/* <img src="/images/header.png"></img> */}
+      <iframe
+        id="inlineFrameExample"
+        width="100%"
+        height="100%"
+        style={{ position: `absolute`, zIndex: -10 }}
+        src="/webgl/fluidwebgl-master/index.html"
+      ></iframe>
       <div className="content-width">
         <Link to="/">
           <div className="logo">

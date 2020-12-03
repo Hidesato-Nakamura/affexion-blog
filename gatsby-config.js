@@ -37,6 +37,7 @@ module.exports = {
     `gatsby-plugin-smoothscroll`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-remark-responsive-iframe`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
