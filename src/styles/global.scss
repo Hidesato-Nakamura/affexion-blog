@@ -83,7 +83,7 @@ html {
 }
 
 header {
-  background-color: #e0fff6;
+  // background-color: #e0fff6;
 }
 
 .turu {
@@ -846,7 +846,7 @@ footer {
     height: 360px;
     // background: url("/images/header.png") no-repeat;
     background-size: cover;
-    background-color: #000;
+    // background-color: #000;
   }
 
   @include mq(sp) {
