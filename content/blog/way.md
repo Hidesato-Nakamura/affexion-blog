@@ -8,7 +8,7 @@ tags:
   - indesign
   - mac
 date: 2020-11-27T06:39:43.788Z
-featuredimage: acb81169f1db4139035e028617bafdd7.png
+featuredimage: indesign-title.webp
 ---
 
 ## menu
