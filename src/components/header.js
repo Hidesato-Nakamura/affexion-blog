@@ -14,9 +14,9 @@ const Header = () => {
       <iframe
         id="inlineFrameExample"
         width="100%"
-        height="100%"
+        height="360px"
         style={{ position: `absolute`, zIndex: -10 }}
-        src="/webgl/fluidwebgl-master/index.html"
+        src="http://54.168.227.141/"
       ></iframe>
       <div className="content-width">
         <Link to="/">
