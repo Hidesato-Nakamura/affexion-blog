@@ -2,10 +2,10 @@ import React from "react"
 // import { rhythm, scale } from "../utils/typography"
 import { Link } from "gatsby"
 import Image from "./customImage.js"
+import Gl from "../gl/index.js"
 
 const Header = () => {
   let header
-
   //   if (path === rootPath) {
   header = (
     <div id="header-box">
@@ -15,16 +15,19 @@ const Header = () => {
         id="inlineFrameExample"
         title="glsl"
         width="100%"
-        height="360px"
+        height="100%"
         style={{ position: `absolute`, zIndex: -10,border:`none` }}
-        src="/gl/"
+        src="https://fluid-9333d.firebaseapp.com/"
+        arrow="true"
       ></iframe>
+      {/* <Gl/> */}
       <div className="content-width">
         <Link to="/">
           <div className="logo">
             <Image filename="affexion-logo.png" />
           </div>
         </Link>
+        {/* <img src="https://fluid-9333d.firebaseapp.com/"/> */}
         <Link to="/cccccc--tue-jun-02-2020-18-33-19-gmt-0900-日本標準時/">
           <div className="home-links2 flex">
             <div className="offical-site">official site</div>
