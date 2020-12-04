@@ -13,10 +13,11 @@ const Header = () => {
       {/* <img src="/images/header.png"></img> */}
       <iframe
         id="inlineFrameExample"
+        title="glsl"
         width="100%"
         height="360px"
-        style={{ position: `absolute`, zIndex: -10 }}
-        src="http://54.168.227.141/"
+        style={{ position: `absolute`, zIndex: -10,border:`none` }}
+        src="/gl/"
       ></iframe>
       <div className="content-width">
         <Link to="/">
