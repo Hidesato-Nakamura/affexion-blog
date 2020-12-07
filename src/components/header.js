@@ -15,7 +15,7 @@ const Header = () => {
         id="inlineFrameExample"
         title="glsl"
         width="100%"
-        height="100%"
+        className="header-iframe"
         style={{ position: `absolute`, zIndex: -10,border:`none` }}
         src="https://fluid-9333d.firebaseapp.com/"
         arrow="true"

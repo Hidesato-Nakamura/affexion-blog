@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../../components/layout"
 
 const Test = ({ location }) => {
-  const siteTitle = `ohiru tabetai`
+  const siteTitle = `Tags`
   const test = (
     <Layout location={location} title={siteTitle}>
       <span>All Category Tags</span>

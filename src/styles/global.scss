@@ -857,6 +857,17 @@ footer {
     position: relative;
   }
 
+  .header-iframe {
+    position: absolute;
+    width: 100%;
+    @include mq() {
+      height: 350px;
+    }
+    @include mq(sp) {
+      height: 100%;
+    }
+  }
+
   .content-width {
     margin: auto;
     position: relative;
