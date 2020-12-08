@@ -6,12 +6,12 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `AFFEXION BLOG`,
+    title: `アフェクション ブログ`,
     author: {
       name: `Taeko Shizuka`,
       summary: `who lives and works in Tomioka city building useful things.`,
     },
-    description: `affexion-blog`,
+    description: `3DCG/unity/WEB/などなどの情報を発信します。`,
     siteUrl: `https://affexion-blog.netlify.app/`,
     social: {
       twitter: `affexionAR`,
