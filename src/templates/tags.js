@@ -2,6 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { Card } from "../components/card"
 
 // const TagsPage = ({
 //   data: {
@@ -53,13 +54,32 @@ const TestTemplate = ({ data, pageContext, location }) => {
   return (
     <Layout location={location} title={`Tags | ${title}`}>
       <SEO title={tag} />
-      <h1>
+      {/* <h1>
         {tag}：検索結果 {data.allMarkdownRemark.totalCount}件
-      </h1>
-      <ul>{postLinks}</ul>
-      <p>
+      </h1> */}
+      <div id="search-result">
+        <div className="result-title">
+          {/* {tag}：検索結果 {data.allMarkdownRemark.totalCount}件 */}
+          <span style={{ color: `#deff00` }}>#&nbsp;</span>
+          <span>{tag}</span>
+        </div>
+
+        {/* <ul>{postLinks}</ul> */}
+        <div className="result">
+          {/* <div className="flex-wrap"> */}
+          {posts.map(({ node }, index) => {
+            return (
+              <article key={node.fields.slug} className="sub-card-block">
+                <Card node={node} />
+              </article>
+            )
+          })}
+          {/* </div> */}
+        </div>
+      </div>
+      {/* <p>
         <Link to="/tags/">Browse all tags</Link>
-      </p>
+      </p> */}
     </Layout>
   )
 }
@@ -85,7 +105,13 @@ export const tagPageQuery = graphql`
             slug
           }
           frontmatter {
+            date(formatString: "MMMM DD. YYYY")
             title
+            description
+            contributor
+            color
+            featuredimage
+            tags
           }
         }
       }

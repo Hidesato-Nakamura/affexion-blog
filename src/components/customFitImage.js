@@ -30,12 +30,12 @@ export default ({ filename }) => (
     render={data => {
       // 指定した画像ファイルパス（コンポーネントのプロパティ）と
       // 一致するgatsby-image用の情報を取得
-      console.log(data)
+      // console.log(data)
       const image = data.images.edges.find(edge => {
         // console.log(n)
         return edge.node.relativePath.includes(filename)
       })
-      console.log(filename)
+      // console.log(filename)
 
       if (!image) {
         console.log("cant find image")

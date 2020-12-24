@@ -2,7 +2,7 @@ import React from "react"
 // import { rhythm, scale } from "../utils/typography"
 import { Link } from "gatsby"
 import Image from "./customImage.js"
-import Gl from "../gl/index.js"
+import P from "../p5/p5"
 
 const Header = () => {
   let header
@@ -18,9 +18,10 @@ const Header = () => {
         className="header-iframe"
         style={{ position: `absolute`, zIndex: -10,border:`none` }}
         src="https://fluid-9333d.firebaseapp.com/"
+        // src="http://localhost:8887/"
         arrow="true"
       ></iframe>
-      {/* <Gl/> */}
+      {/* <P/> */}
       <div className="content-width">
         <Link to="/">
           <div className="logo">
