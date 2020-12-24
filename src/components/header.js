@@ -36,7 +36,7 @@ const Header = () => {
               href="http://affexion.jp"
               target="_blank"
               rel="noopener noreferrer"
-              style={{ color: `#fff`, textDecoration: `none` }}
+              style={{ color: `#000`, textDecoration: `none` }}
             >
               official site
             </a>
