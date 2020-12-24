@@ -16,7 +16,7 @@ const Header = () => {
         title="glsl"
         width="100%"
         className="header-iframe"
-        style={{ position: `absolute`, zIndex: -10,border:`none` }}
+        style={{ position: `absolute`, zIndex: -10, border: `none` }}
         src="https://fluid-9333d.firebaseapp.com/"
         // src="http://localhost:8887/"
         arrow="true"
@@ -29,24 +29,53 @@ const Header = () => {
           </div>
         </Link>
         {/* <img src="https://fluid-9333d.firebaseapp.com/"/> */}
-        <Link to="/cccccc--tue-jun-02-2020-18-33-19-gmt-0900-日本標準時/">
-          <div className="home-links2 flex">
-            <div className="offical-site">official site</div>
-            <div className="contact-infomation">
-              <Image filename="email.png" />
-            </div>
-            <div className="contact-infomation">
-              <Image filename="twitter.png" />
-            </div>
-            <div className="contact-infomation">
-              <Image filename="instagram.png" />
-            </div>
+        {/* <Link to="/cccccc--tue-jun-02-2020-18-33-19-gmt-0900-日本標準時/"> */}
+        <div className="home-links2 flex">
+          <div className="offical-site">
+            <a
+              href="http://affexion.jp"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: `#fff`, textDecoration: `none` }}
+            >
+              official site
+            </a>
+          </div>
 
-            {/* <img src="/images/icons/email.png" alt="" />
+          <div className="contact-infomation">
+            <a
+              href="mailto:user@dammy.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image filename="email.png" />
+            </a>
+          </div>
+
+          <div className="contact-infomation">
+            <a
+              href="https://twitter.com/affexionAR"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image filename="twitter.png" />
+            </a>
+          </div>
+          <div className="contact-infomation">
+            <a
+              href="https://www.instagram.com/afx_cgmotion/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image filename="instagram.png" />
+            </a>
+          </div>
+
+          {/* <img src="/images/icons/email.png" alt="" />
             <img src="/images/icons/twitter.png" alt="" />
             <img src="/images/icons/instagram.png" alt="" /> */}
-          </div>
-        </Link>
+        </div>
+        {/* </Link> */}
         {/* <Link to="/admin">
           <div className="home-admin">記事投稿</div>
         </Link> */}

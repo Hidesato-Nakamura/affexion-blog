@@ -5,15 +5,42 @@ export default function Footer() {
   return (
     <div className="footer-box">
       <div className="links">
-        <div className="official-site">official site</div>
-        <div className="contact-infomation">
-          <Image filename="email.png" />
+        <div className="official-site">
+          <a
+            href="http://affexion.jp"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: `#fff`, textDecoration: `none` }}
+          >
+            official site
+          </a>
         </div>
         <div className="contact-infomation">
-          <Image filename="twitter.png" />
+          <a
+            href="mailto:user@dammy.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image filename="email.png" />
+          </a>
         </div>
         <div className="contact-infomation">
-          <Image filename="instagram.png" />
+          <a
+            href="https://twitter.com/affexionAR"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image filename="twitter.png" />
+          </a>
+        </div>
+        <div className="contact-infomation">
+          <a
+            href="https://www.instagram.com/afx_cgmotion/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image filename="instagram.png" />
+          </a>
         </div>
         {/* <div>
       <Image filename="email.png"/>
