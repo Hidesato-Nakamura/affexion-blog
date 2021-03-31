@@ -8,7 +8,7 @@ tags:
   - google
   - gatsby.js
 date: 2020-06-16T10:36:10.957Z
-featuredimage: lion-5218109_1280.jpg
+featuredimage: /static/images/uploads/lion-5218109_1280.jpg
 ---
 
 <!--StartFragment-->

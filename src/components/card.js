@@ -41,11 +41,12 @@ export const Card = ({ node }) => {
   tags.forEach((tag, index) => {
     tags[index] = tag.toLowerCase()
   })
+  const imageName = frontmatter.split("/")[4]
   let card = (
     <Link to={slug} style={{ textDecoration: "none" }}>
       <section className="sub-card">
         <div className="card-img-block">
-          <Image filename={frontmatter.featuredimage} />
+          <Image filename={imageName} />
         </div>
         <div className="card-content">
           <div className="date">{frontmatter.date}</div>
