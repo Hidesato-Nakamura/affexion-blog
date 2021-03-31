@@ -5,11 +5,12 @@ import Image from "../components/customFitImage"
 export const RankingCard = ({ node, rank }) => {
   const frontmatter = node.frontmatter
   const slug = node.fields.slug
+  const imageName = frontmatter.featuredimage.split("/")[4]
   let card = (
     <Link to={slug} style={{ textDecoration: "none" }}>
       <section className="sub-card">
         <div className="card-img-block2">
-          <Image filename={frontmatter.featuredimage} />
+          <Image filename={imageName} />
           {/* <img src= alt="" /> */}
         </div>
 
