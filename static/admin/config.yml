@@ -24,7 +24,7 @@ collections:
           label: "投稿者",
           name: "contributor",
           widget: "select",
-          options: ["Kazuma Kanai", "Hidesato Nakamura"],
+          options: ["Taeko Shizuka", "Kazuma Kanai", "Hidesato Nakamura"],
         }
       - { label: "アイコン色", name: "color", widget: "color" }
       - { label: "本文", name: "body", widget: "markdown" }
