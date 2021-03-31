@@ -41,7 +41,7 @@ export const Card = ({ node }) => {
   tags.forEach((tag, index) => {
     tags[index] = tag.toLowerCase()
   })
-  const imageName = frontmatter.split("/")[4]
+  const imageName = frontmatter.featuredimage.split("/")[4]
   let card = (
     <Link to={slug} style={{ textDecoration: "none" }}>
       <section className="sub-card">
