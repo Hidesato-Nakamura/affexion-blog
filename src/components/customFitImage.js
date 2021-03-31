@@ -38,7 +38,7 @@ export default ({ filename }) => (
       // console.log(filename)
 
       if (!image) {
-        console.log("cant find image" + image.filename)
+        console.log("cant find image" + image.node.name)
         return
       }
 
