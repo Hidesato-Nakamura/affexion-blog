@@ -24,7 +24,14 @@ collections:
           label: "投稿者",
           name: "contributor",
           widget: "select",
-          options: ["Taeko Shizuka", "Kazuma Kanai", "Hidesato Nakamura"],
+          options:
+            [
+              "採用担当",
+              "広報部",
+              "デザイン部",
+              "開発部 マミミ",
+              "開発部 ハナ",
+            ],
         }
       - { label: "アイコン色", name: "color", widget: "color" }
       - { label: "本文", name: "body", widget: "markdown" }
