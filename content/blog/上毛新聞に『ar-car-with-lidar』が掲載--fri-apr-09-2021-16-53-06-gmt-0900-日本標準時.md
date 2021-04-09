@@ -5,6 +5,9 @@ description: 上毛新聞に弊社開発アプリ『AR CAR with
   LiDAR』が掲載されました。前回リリースしたARカメラアプリ『Effectron』も併せて掲載され、AR技術及びLiDARセンサーについて記載されています。
 contributor: 広報部
 color: "#00ff00"
+tags:
+  - メディア掲載
+  - ""
 date: 2021-04-09T07:53:06.969Z
 featuredimage: /static/images/uploads/jomo_logo.png
 ---
