@@ -7,7 +7,6 @@ contributor: 広報部
 color: "#00ff00"
 tags:
   - メディア掲載
-  - ""
 date: 2021-04-09T07:53:06.969Z
 featuredimage: /static/images/uploads/jomo_logo.png
 ---
@@ -18,10 +17,10 @@ featuredimage: /static/images/uploads/jomo_logo.png
 # 記事の概要
 
 ## 『AR CAR with LiDAR』について
-　ウェブデザインを手掛けるアフェクションはLiDARセンサーを使ったARアプリ「AR CAR with LiDAR」をリリース。アップル製品の最新機種に搭載されたLiDARセンサーを使うことで従来のARアプリより正確に空間を認識することができる。実際に置いてある机や壁などの裏にAR表示した自動車が回り込むといった視覚表現が可能となった。参考動画: https://youtu.be/8-HsLqE5h9Y<br>
+ウェブデザインを手掛けるアフェクションはLiDARセンサーを使ったARアプリ「AR CAR with LiDAR」をリリース。アップル製品の最新機種に搭載されたLiDARセンサーを使うことで従来のARアプリより正確に空間を認識することができる。実際に置いてある机や壁などの裏にAR表示した自動車が回り込むといった視覚表現が可能となった。参考動画: https://youtu.be/8-HsLqE5h9Y<br>
 
 ## 『Effectron』について
-　アフェクションは昨年8月、同じくLiDARセンサーを活用したARアプリ『Effectron』をリリース。現実にある空間を洞窟のように見せることや、人物のみを輝かせたりモザイク処理を行うことがアプリ内で行える。ロシアや米国など国内外のIT系メディアに取り上げられ3万回以上ダウンロードされた。<br>
+アフェクションは昨年8月、同じくLiDARセンサーを活用したARアプリ『Effectron』をリリース。現実にある空間を洞窟のように見せることや、人物のみを輝かせたりモザイク処理を行うことがアプリ内で行える。ロシアや米国など国内外のIT系メディアに取り上げられ3万回以上ダウンロードされた。<br>
 参考動画: https://youtu.be/pVbgzuZsQRU
 <br>
 ## 事業内容<br>
