@@ -1,9 +1,12 @@
 ---
 templateKey: blog-post
-title: 『Effeectron』WWDC2021に合わせ多数メディアにて掲載いただきました
+title: 『Effeectron』WWDC2021に合わせ多数メディアにて掲載いただきました(株式会社アフェクション)
 description: WWDC2021に合わせ弊社制作アプリ『Effeectron』をEngadget,TechCrunch,GIZMODO等の多数メディアに掲載いただきました
 contributor: 広報部
 color: "#00ff00"
+tags:
+  - "#メディア掲載"
+  - "#Effectron"
 date: 2021-06-10T10:44:13.188Z
 featuredimage: /static/images/uploads/tc.png
 ---
