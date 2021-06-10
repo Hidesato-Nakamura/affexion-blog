@@ -5,8 +5,8 @@ description: WWDC2021に合わせ弊社制作アプリ『Effeectron』をEngadge
 contributor: 広報部
 color: "#00ff00"
 tags:
-  - "#メディア掲載"
-  - "#Effectron"
+  - メディア掲載
+  - effectron
 date: 2021-06-10T10:44:13.188Z
 featuredimage: /static/images/uploads/tc.png
 ---
