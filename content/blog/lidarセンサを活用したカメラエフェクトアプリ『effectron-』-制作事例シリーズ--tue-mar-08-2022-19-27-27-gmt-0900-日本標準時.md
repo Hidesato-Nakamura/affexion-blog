@@ -51,6 +51,6 @@ iPad Pro 2021から搭載されたLiDARセンサーを使い、取得した地�
 #### LiDARの可能性<br>
 ARアプリを使った際に、平面を検知するのに時間がかかったり、トラッキング不安定だったりとAR表示がうまくい経験が多くの方にあったかと思います。しかし、 [LiDARセンサー](https://www.rohm.co.jp/electronics-basics/laser-diodes/ld_what10)がiOS端末に搭載されたことにより画像認識以外の方法ににより空間情報の取得が可能となり、上記の問題が大きく改善されました。また、地形情報が取得できることにより、地形のオクルージョン(前後関係の矛盾を解消するマスク処理のようなもの)が可能となり、ARKitにこれまであった[ピープルオクルージョン](https://developer.apple.com/documentation/arkit/camera_lighting_and_effects/occluding_virtual_content_with_people)と組み合わせることで表現の幅が大きく広がりました。これらの機能を文字や言葉で表すことは難しいと感じ、多くの人に可能性を感じてもらいたく視覚的に分かるアプリを作りました。<br><br>
 
-### 👾👾お願い👾👾<br>
+### 👾👾アフェクションから👾👾<br>
 **株式会社アフェクションはARアプリをはじめ、インタラクティブコンテンツ、WEBアプリの企画・制作を行っております。ご相談ございましたらお気軽にご連絡ください。<br><br>メール: cgmotion@affexion.jp**
 
