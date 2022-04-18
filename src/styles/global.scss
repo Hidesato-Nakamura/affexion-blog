@@ -110,15 +110,22 @@ footer {
   }
 }
 
+.articles-mt-165 {
+  @include mq() {
+    margin-top: 165px;
+  }
+  @include mq(sp) {
+    margin-top: v(140);
+  }
+}
+
 .flex-wrap {
   @include mq() {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 165px;
   }
   @include mq(sp) {
-    margin-top: v(140);
   }
   &:after {
     content: "";

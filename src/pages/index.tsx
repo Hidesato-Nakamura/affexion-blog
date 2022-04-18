@@ -53,30 +53,31 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
 
   function tick() {
     if (add < 2) {
-      num += 6
-      const element = (
-        <div className="flex flex-wrap" style={{ marginTop: 0 }}>
-          {posts.map(({ node }, index) => {
-            return index >= num - 6 && index < num ? (
-              <article key={node.fields.slug} className="sub-card-block">
-                <Card node={node} />
-              </article>
-            ) : null
-          })}
-        </div>
-      )
-      ReactDOM.render(element, document.getElementById(`readmore${add}`))
+      // num += 6
+      // const element = (
+      //   <div className="flex flex-wrap" style={{ marginTop: 0 }}>
+      //     {posts.map(({ node }, index) => {
+      //       return index >= num - 6 && index < num ? (
+      //         <article key={node.fields.slug} className="sub-card-block">
+      //           <Card node={node} />
+      //         </article>
+      //       ) : null
+      //     })}
+      //   </div>
+      // )
+      // ReactDOM.render(element, document.getElementById(`readmore${add}`))
+      document.getElementById(`readmore${add}`).style.display = "flex"
       add++
-      if (add === 2) {
-        document.getElementById(`readmore`).remove()
-      }
+      // if (add === 2) {
+      //   document.getElementById(`readmore`).remove()
+      // }
     }
   }
 
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="Home" />
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap articles-mt-165">
         {posts.map(({ node }, index) => {
           return index < num ? (
             <article key={node.fields.slug} className="sub-card-block">
@@ -85,8 +86,44 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
           ) : null
         })}
       </div>
-      <div id="readmore0"></div>
-      <div id="readmore1"></div>
+      <div
+        className="flex flex-wrap"
+        style={{ display: "none" }}
+        id="readmore0"
+      >
+        {posts.map(({ node }, index) => {
+          return index >= num && index < num + 6 ? (
+            <article key={node.fields.slug} className="sub-card-block">
+              <Card node={node} />
+            </article>
+          ) : null
+        })}
+      </div>
+      <div
+        className="flex flex-wrap"
+        style={{ display: "none" }}
+        id="readmore1"
+      >
+        {posts.map(({ node }, index) => {
+          return index >= num + 6 && index < num + 12 ? (
+            <article key={node.fields.slug} className="sub-card-block">
+              <Card node={node} />
+            </article>
+          ) : null
+        })}
+      </div>
+      {/* <div className="flex flex-wrap" style={{ display: "none !important" }}>
+        {posts.map(({ node }, index) => {
+          return index >= num + 12 - 6 && index < num + 12 ? (
+            <article key={node.fields.slug} className="sub-card-block">
+              <Card node={node} />
+            </article>
+          ) : null
+        })}
+      </div> */}
+
+      {/* <div id="readmore0"></div> */}
+      {/* <div id="readmore1"></div> */}
 
       <div className="readmore" id="readmore" onClick={tick}>
         <Image filename="read_more.png" />
