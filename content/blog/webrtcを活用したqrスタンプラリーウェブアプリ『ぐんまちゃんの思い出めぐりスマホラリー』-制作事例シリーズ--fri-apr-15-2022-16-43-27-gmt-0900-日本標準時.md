@@ -18,7 +18,7 @@ featuredimage: https://firebasestorage.googleapis.com/v0/b/affexion-blog-image.a
 ## 『ぐんまちゃんの思いでめぐりスマホラリー』の概要<br>
 群馬県吾妻地域の観光促進を目的として、地域内の各施設に設置してあるデジタルスタンプを**QRコードをスキャンして集めながら周遊できるウェブアプリ**です。<br>イベントの参加からスタンプ集め、アンケート、商品の応募まで一貫してアプリ内で行えます。また、様々な年齢層の方が使えるようシンプルで分かりやすいUI/UXにすることを心がけました。<br>[プレスリリース](https://prtimes.jp/main/html/rd/p/000000004.000063554.html)<br><br>デモプレイご希望の企業、自治体関係者の方がおりましたらお気軽にご連絡ください。<br>メール: cgmotion@affexion.jp<br><br>
 ![UI](https://firebasestorage.googleapis.com/v0/b/affexion-blog-image.appspot.com/o/digitalrally%2FFrame%2020.png?alt=media&token=0dd8672e-8ddb-4055-9fba-cb2fdc48d24d "ラリー")<br>・UI画像<br>
-![ノベルティー](https://firebasestorage.googleapis.com/v0/b/affexion-blog-image.appspot.com/o/digitalrally%2FFrame%208.png?alt=media&token=4a2ab1eb-41c5-4761-8668-e90be081a3d1 "ラリー")<br>・ノベルティ画像<br>
+![ノベルティー](https://firebasestorage.googleapis.com/v0/b/affexion-blog-image.appspot.com/o/digitalrally%2FFrame%208.png?alt=media&token=4a2ab1eb-41c5-4761-8668-e90be081a3d1 "ラリー")<br>・ノベルティ画像<br> 
 ## 開発について<br>
 ### 開発環境<br>
 - Nuxt.js
