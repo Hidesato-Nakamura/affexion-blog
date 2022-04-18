@@ -9,9 +9,9 @@ tags:
   - effectron
   - 制作事例
 date: 2022-03-08T10:27:27.494Z
-featuredimage: /static/images/uploads/press_iphone.png
+featuredimage: /static/images/uploads/effectron_top.png
 ---
-![nn](https://prtimes.jp/i/63554/2/resize/d63554-2-308111-0.png "effectron")
+![nn](https://firebasestorage.googleapis.com/v0/b/affexion-blog-image.appspot.com/o/effectron%2Feffectron_top.png?alt=media&token=2e1104ca-6d34-4509-816a-5fd805d188ed "effectron")
 
 ## 『Effectron』の概要
 iPad Pro 2021から搭載されたLiDARセンサーを使い、取得した地形にエフェクトを描画することで3次元的なエフェクト演出ができます。
