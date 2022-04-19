@@ -48,7 +48,8 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
   const posts = data.allMarkdownRemark.edges
   var w = typeof window !== `undefined` ? window : null
   var wi = typeof window !== `undefined` ? w.innerWidth : null
-  var num = wi !== null && wi >= 750 ? 6 : 7
+  var isSp = wi !== null && wi < 750
+  var num = isSp ? 7 : 6
   var add = 0
 
   function tick() {
@@ -66,7 +67,12 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
       //   </div>
       // )
       // ReactDOM.render(element, document.getElementById(`readmore${add}`))
-      document.getElementById(`readmore${add}`).style.display = "flex"
+      if (isSp) {
+        document.getElementById(`readmore${add}`).style.display = "block"
+      } else {
+        document.getElementById(`readmore${add}`).style.display = "flex"
+      }
+
       add++
       // if (add === 2) {
       //   document.getElementById(`readmore`).remove()
