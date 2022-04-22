@@ -10,7 +10,7 @@ tags:
   - Nuxt
   - Firebase
   - Web
-date: 2022-04-15T07:43:27.978Z
+date: 2022-04-22T09:01:38.571Z
 featuredimage: /static/images/uploads/frame-20.png
 ---
 ![nn](https://firebasestorage.googleapis.com/v0/b/affexion-blog-image.appspot.com/o/digitalrally%2Fd63554-4-5b179ba66e076fbc6ab2-0.png?alt=media&token=6661f339-c460-4882-af1b-b2fded4949e5 "スマホラリー")
@@ -25,6 +25,8 @@ featuredimage: /static/images/uploads/frame-20.png
 - Firebase Authentication
 - Firebase Realtime Database
 - Amazon Lightsail<br>
+
+
 ### コアな機能<br>
 - ログイン、ユーザー情報の収集
 - デバイスカメラを使ったQRコードの読み取り
@@ -33,8 +35,12 @@ featuredimage: /static/images/uploads/frame-20.png
 - 抽選への応募
 - アンケートの収集
 - アンケート結果の集計システム<br>
+
+
 ## イベントが終わってみて<br>
 別事業者が実施した前年度はcookieでスタンプの獲得状況を保存していて、ユーザー登録のハードルがなかったため今年度は登録者数が伸び悩むかと心配していました。しかし、マーケ、UI/UXを細かく分析し一つ一つ改善していったことで倍以上のユーザーに使っていただくことができました。登録ユーザーが増えましたが大きなトラブルなく、アンケートも好意的な意見をいただくことができました。<br><br>
+
+
 ### 👾👾アフェクションから👾👾<br>
 株式会社アフェクションはWEBアプリをはじめ、インタラクティブコンテンツ、xRアプリの企画・制作を行っております。<br>**『ぐんまちゃんの思い出めぐりスマホラーリ』のデモプレイを行いたい、企業、自治体関係者の方がおりましたらお気軽にご連絡ください。**<br>メール: cgmotion@affexion.jp
 
